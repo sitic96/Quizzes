@@ -1,0 +1,13 @@
+/* 
+  Localized.strings
+  SoccerQuiz
+
+  Created by Sitora Guliamova on 1/17/21.
+  
+*/
+
+// MARK: Login screen
+
+"welcomeMessage" = "Hello!";
+"namePlaceholder" = "What's your name?";
+"next" = "Next";

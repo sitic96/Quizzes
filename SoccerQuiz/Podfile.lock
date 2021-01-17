@@ -1,16 +1,25 @@
 PODS:
   - Alamofire (5.4.0)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
 
 DEPENDENCIES:
   - Alamofire
+  - Localize-Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Localize-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
 
-PODFILE CHECKSUM: 4e46d40e7af2465e5a1a3f44722b904667f1c334
+PODFILE CHECKSUM: d6f7f3433223564090582e34388a7bc5ee741d60
 
 COCOAPODS: 1.10.0
