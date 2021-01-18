@@ -11,3 +11,5 @@
 "welcomeMessage" = "Hello!";
 "namePlaceholder" = "What's your name?";
 "next" = "Next";
+"welcomeBackMessage" = "Welcome back, \n%@";
+"firstWelcomeMessage" = "Welcome, \n%@";

@@ -40,6 +40,8 @@
 		727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F2CD225B4D46D009EAB31 /* AuthRouter.swift */; };
 		72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5D1FC25B4B4DB00761F9D /* LocalizeKeys.swift */; };
 		72B5D20325B4C1DA00761F9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72B5D20525B4C1DA00761F9D /* Localizable.strings */; };
+		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
+		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
 		B8A2C077AD0DBC719D5CA4B0 /* Pods_SoccerQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		72B5D20425B4C1DA00761F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		72B5D20725B4C1EE00761F9D /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		72B5D20925B4C20E00761F9D /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
+		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
 		7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C371E2A179B62A14E8EA4C92 /* Pods-SoccerQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerQuiz.release.xcconfig"; path = "Target Support Files/Pods-SoccerQuiz/Pods-SoccerQuiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				722BED5125B497B3008023B2 /* WelcomeBackViewController.swift */,
+				72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */,
+				72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */,
 			);
 			path = WelcomeBack;
 			sourceTree = "<group>";
@@ -394,10 +400,12 @@
 				72731AB125B47F4300F21370 /* ViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
+				72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */,
 				722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */,
 				72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */,
 				72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */,
 				72731ACE25B481D200F21370 /* StyleManager.swift in Sources */,
+				72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */,
 				7203D14725B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */,
 				722BED5A25B4A49D008023B2 /* Const.swift in Sources */,
 			);

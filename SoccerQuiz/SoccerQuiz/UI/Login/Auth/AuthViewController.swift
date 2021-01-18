@@ -29,6 +29,7 @@ class AuthViewController: UIViewController {
         goNextButton.alpha = Const.nextButtonDisabledAlpha
         setupStyle()
         localize()
+        bindViewModel()
         hideKeyboardWhenTappedAround()
     }
 

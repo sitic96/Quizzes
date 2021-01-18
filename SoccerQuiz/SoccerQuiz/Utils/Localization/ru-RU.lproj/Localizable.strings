@@ -11,3 +11,5 @@
 "welcomeMessage" = "Привет!";
 "namePlaceholder" = "Как тебя зовут?";
 "next" = "Дальше";
+"welcomeBackMessage" = "С возвращением, \n%@";
+"firstWelcomeMessage" = "Добро пожаловать, \n%@";

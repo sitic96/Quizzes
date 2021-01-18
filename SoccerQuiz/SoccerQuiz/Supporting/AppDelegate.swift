@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     .instantiateViewController(withIdentifier: "WelcomeBackContrller") as? WelcomeBackViewController else {
                 return true
             }
+            welcomeVC.viewModel = WelcomeBackViewModel(welcomeMessageKey:
+                                                        LocalizeKeys.Auth.welcomeBackMessage)
+            welcomeVC.router = WelcomeBackRouter(controller: welcomeVC)
             window?.rootViewController = welcomeVC
         } else {
             guard let authController = UIStoryboard(name: "Login",

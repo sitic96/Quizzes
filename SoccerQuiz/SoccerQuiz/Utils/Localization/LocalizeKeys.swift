@@ -12,5 +12,7 @@ struct LocalizeKeys {
         static let welcomeMessage = "welcomeMessage"
         static let namePlaceholder = "namePlaceholder"
         static let next = "next"
+        static let welcomeBackMessage = "welcomeBackMessage"
+        static let firstWelcomeMessage = "firstWelcomeMessage"
     }
 }
