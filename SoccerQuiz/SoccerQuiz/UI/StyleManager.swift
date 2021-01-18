@@ -22,12 +22,12 @@ struct StyleManager {
         }
 
         struct Fonts {
-            static let titleFont = UIFont(name: "MontserratAlternates-Regular",
-                                          size: 24.0)!
+            static let titleFont = UIFont(name: "MontserratAlternates-Bold",
+                                          size: 28.0)!
             static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
                                                 size: 12.0)!
             static let mainFont = UIFont(name: "MontserratAlternates-Light",
-                                         size: 16.0)!
+                                         size: 18.0)!
         }
     }
 }

@@ -12,8 +12,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if UserDefaults.standard.bool(forKey: Const.UserDefaultsKeys.didLaunchBeforeKey) {
+            guard let welcomeVC = UIStoryboard(name: "Login",
+                                               bundle: .main)
+                    .instantiateViewController(withIdentifier: "WelcomeBackContrller") as? WelcomeBackViewController else {
+                return true
+            }
+            welcomeVC.viewModel = WelcomeBackViewModel(welcomeMessageKey:
+                                                        LocalizeKeys.Auth.welcomeBackMessage)
+            welcomeVC.router = WelcomeBackRouter(controller: welcomeVC)
+            window?.rootViewController = welcomeVC
+        } else {
+            guard let authController = UIStoryboard(name: "Login",
+                                                    bundle: .main).instantiateInitialViewController() as? AuthViewController else {
+                return true
+            }
+            authController.viewModel = AuthViewModel()
+            authController.router = AuthRouter(controller: authController)
+            window?.rootViewController = authController
+        }
         return true
     }
 }
