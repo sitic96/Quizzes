@@ -42,6 +42,17 @@
 		72B5D20325B4C1DA00761F9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72B5D20525B4C1DA00761F9D /* Localizable.strings */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
 		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
+		72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB025B61EE600B401BC /* CachingManager.swift */; };
+		72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB525B61F0000B401BC /* SoccerQuiz.xcdatamodeld */; };
+		72F24DBD25B6224000B401BC /* CoreTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DBC25B6224000B401BC /* CoreTheme.swift */; };
+		72F24DC225B622E100B401BC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DC125B622E100B401BC /* Theme.swift */; };
+		72F24DF025B6240500B401BC /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DEF25B6240500B401BC /* CoreDataError.swift */; };
+		72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF225B6249500B401BC /* CoreQuiz.swift */; };
+		72F24DF625B624CE00B401BC /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF525B624CE00B401BC /* Quiz.swift */; };
+		72F24DF925B6255700B401BC /* CoreQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF825B6255700B401BC /* CoreQuestion.swift */; };
+		72F24DFC25B6258B00B401BC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DFB25B6258B00B401BC /* Question.swift */; };
+		72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DFE25B62A3000B401BC /* CoreContent.swift */; };
+		72F24E0225B62A6A00B401BC /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24E0125B62A6A00B401BC /* Content.swift */; };
 		B8A2C077AD0DBC719D5CA4B0 /* Pods_SoccerQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +97,17 @@
 		72B5D20925B4C20E00761F9D /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
+		72F24DB025B61EE600B401BC /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
+		72F24DB625B61F0000B401BC /* SoccerQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoccerQuiz.xcdatamodel; sourceTree = "<group>"; };
+		72F24DBC25B6224000B401BC /* CoreTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTheme.swift; sourceTree = "<group>"; };
+		72F24DC125B622E100B401BC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		72F24DEF25B6240500B401BC /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		72F24DF225B6249500B401BC /* CoreQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreQuiz.swift; sourceTree = "<group>"; };
+		72F24DF525B624CE00B401BC /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		72F24DF825B6255700B401BC /* CoreQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreQuestion.swift; sourceTree = "<group>"; };
+		72F24DFB25B6258B00B401BC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		72F24DFE25B62A3000B401BC /* CoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContent.swift; sourceTree = "<group>"; };
+		72F24E0125B62A6A00B401BC /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C371E2A179B62A14E8EA4C92 /* Pods-SoccerQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerQuiz.release.xcconfig"; path = "Target Support Files/Pods-SoccerQuiz/Pods-SoccerQuiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +192,8 @@
 		72731AAB25B47F4300F21370 /* SoccerQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				72F24DC025B622D800B401BC /* Model */,
+				72F24DAF25B61ED300B401BC /* Managers */,
 				72731AC725B4812E00F21370 /* UI */,
 				722BED5825B4A490008023B2 /* Utils */,
 				72731AC625B4811A00F21370 /* Supporting */,
@@ -250,6 +274,55 @@
 				72B5D20525B4C1DA00761F9D /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		72F24DAF25B61ED300B401BC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				72F24DB425B61EEA00B401BC /* Caching */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		72F24DB425B61EEA00B401BC /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				72F24DB925B61F1B00B401BC /* CoreData */,
+				72F24DB025B61EE600B401BC /* CachingManager.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		72F24DB925B61F1B00B401BC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				72F24DB525B61F0000B401BC /* SoccerQuiz.xcdatamodeld */,
+				72F24DBB25B6216F00B401BC /* Model */,
+				72F24DEF25B6240500B401BC /* CoreDataError.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		72F24DBB25B6216F00B401BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72F24DBC25B6224000B401BC /* CoreTheme.swift */,
+				72F24DF225B6249500B401BC /* CoreQuiz.swift */,
+				72F24DF825B6255700B401BC /* CoreQuestion.swift */,
+				72F24DFE25B62A3000B401BC /* CoreContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72F24DC025B622D800B401BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72F24DC125B622E100B401BC /* Theme.swift */,
+				72F24DF525B624CE00B401BC /* Quiz.swift */,
+				72F24DFB25B6258B00B401BC /* Question.swift */,
+				72F24E0125B62A6A00B401BC /* Content.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EDA7DDFE85BA67EAA401BFAD /* Frameworks */ = {
@@ -399,14 +472,25 @@
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
 				72731AB125B47F4300F21370 /* ViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
+				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
+				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
+				72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */,
+				72F24E0225B62A6A00B401BC /* Content.swift in Sources */,
+				72F24DF925B6255700B401BC /* CoreQuestion.swift in Sources */,
 				72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */,
 				722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */,
+				72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */,
 				72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */,
+				72F24DC225B622E100B401BC /* Theme.swift in Sources */,
+				72F24DFC25B6258B00B401BC /* Question.swift in Sources */,
 				72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */,
 				72731ACE25B481D200F21370 /* StyleManager.swift in Sources */,
+				72F24DF025B6240500B401BC /* CoreDataError.swift in Sources */,
 				72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */,
+				72F24DF625B624CE00B401BC /* Quiz.swift in Sources */,
 				7203D14725B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */,
+				72F24DBD25B6224000B401BC /* CoreTheme.swift in Sources */,
 				722BED5A25B4A49D008023B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +707,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		72F24DB525B61F0000B401BC /* SoccerQuiz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72F24DB625B61F0000B401BC /* SoccerQuiz.xcdatamodel */,
+			);
+			currentVersion = 72F24DB625B61F0000B401BC /* SoccerQuiz.xcdatamodel */;
+			path = SoccerQuiz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 72731AA125B47F4300F21370 /* Project object */;
 }
