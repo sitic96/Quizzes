@@ -18,7 +18,7 @@ struct WelcomeBackRouter {
 extension WelcomeBackRouter: WelcomeBackRouterProtocol {
     func goToMainScreen() {
         guard let window = UIApplication.shared.keyWindow,
-              let mainScreenFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() as? QuizesViewController else {
+              let mainScreenFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() as? QuizzesViewController else {
             return
         }
         mainScreenFirstController.viewModel = QuizesViewModel()

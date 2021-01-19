@@ -14,7 +14,7 @@
 		722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5525B49D6B008023B2 /* AuthViewModel.swift */; };
 		722BED5A25B4A49D008023B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5925B4A49D008023B2 /* Const.swift */; };
 		72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AAC25B47F4300F21370 /* AppDelegate.swift */; };
-		72731AB125B47F4300F21370 /* QuizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AB025B47F4300F21370 /* QuizesViewController.swift */; };
+		72731AB125B47F4300F21370 /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AB025B47F4300F21370 /* QuizzesViewController.swift */; };
 		72731AB425B47F4300F21370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB225B47F4300F21370 /* Main.storyboard */; };
 		72731AB625B47F4500F21370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB525B47F4500F21370 /* Assets.xcassets */; };
 		72731AB925B47F4500F21370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB725B47F4500F21370 /* LaunchScreen.storyboard */; };
@@ -70,7 +70,7 @@
 		722BED5925B4A49D008023B2 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		72731AA925B47F4300F21370 /* SoccerQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72731AAC25B47F4300F21370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72731AB025B47F4300F21370 /* QuizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizesViewController.swift; sourceTree = "<group>"; };
+		72731AB025B47F4300F21370 /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
 		72731AB325B47F4300F21370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72731AB525B47F4500F21370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72731AB825B47F4500F21370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		7208C48425B74B2F0089EC82 /* Quizes screen */ = {
 			isa = PBXGroup;
 			children = (
-				72731AB025B47F4300F21370 /* QuizesViewController.swift */,
+				72731AB025B47F4300F21370 /* QuizzesViewController.swift */,
 				7208C48525B74B4C0089EC82 /* QuizesViewModel.swift */,
 			);
 			path = "Quizes screen";
@@ -488,7 +488,7 @@
 			files = (
 				727972A025B74239008234D5 /* CoreOption.swift in Sources */,
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
-				72731AB125B47F4300F21370 /* QuizesViewController.swift in Sources */,
+				72731AB125B47F4300F21370 /* QuizzesViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
 				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
 				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,

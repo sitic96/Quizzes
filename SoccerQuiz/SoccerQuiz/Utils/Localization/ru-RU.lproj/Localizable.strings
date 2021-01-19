@@ -6,6 +6,8 @@
   
 */
 
+"appTitle" = "Football Quizzes";
+
 // MARK: Login screen
 
 "welcomeMessage" = "Привет!";
