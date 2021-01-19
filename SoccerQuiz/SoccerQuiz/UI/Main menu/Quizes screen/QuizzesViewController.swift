@@ -26,6 +26,8 @@ class QuizzesViewController: UIViewController {
     }
 
     private func setupStyle() {
+        view.backgroundColor = StyleManager.MainScreen.backgroundColor
+
         appTitleLabel.textColor = StyleManager.General.Colors.mainColor
         appTitleLabel.font = StyleManager.General.Fonts.titleFont
 

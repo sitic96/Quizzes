@@ -30,4 +30,8 @@ struct StyleManager {
                                          size: 18.0)!
         }
     }
+
+    struct MainScreen {
+        static let backgroundColor = #colorLiteral(red: 0.937254902, green: 0.9529411765, blue: 0.968627451, alpha: 1)
+    }
 }
