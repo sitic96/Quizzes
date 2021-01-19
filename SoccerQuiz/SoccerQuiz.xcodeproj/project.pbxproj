@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7203D14725B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203D14625B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift */; };
+		7208C48625B74B4C0089EC82 /* QuizesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208C48525B74B4C0089EC82 /* QuizesViewModel.swift */; };
 		722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED4D25B497A3008023B2 /* AuthViewController.swift */; };
 		722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5125B497B3008023B2 /* WelcomeBackViewController.swift */; };
 		722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5525B49D6B008023B2 /* AuthViewModel.swift */; };
 		722BED5A25B4A49D008023B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5925B4A49D008023B2 /* Const.swift */; };
 		72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AAC25B47F4300F21370 /* AppDelegate.swift */; };
-		72731AB125B47F4300F21370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AB025B47F4300F21370 /* ViewController.swift */; };
+		72731AB125B47F4300F21370 /* QuizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AB025B47F4300F21370 /* QuizesViewController.swift */; };
 		72731AB425B47F4300F21370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB225B47F4300F21370 /* Main.storyboard */; };
 		72731AB625B47F4500F21370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB525B47F4500F21370 /* Assets.xcassets */; };
 		72731AB925B47F4500F21370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB725B47F4500F21370 /* LaunchScreen.storyboard */; };
@@ -61,13 +62,15 @@
 /* Begin PBXFileReference section */
 		64BB26AA085CBBB37C9AF1A2 /* Pods-SoccerQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerQuiz.debug.xcconfig"; path = "Target Support Files/Pods-SoccerQuiz/Pods-SoccerQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		7203D14625B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTappedAround.swift"; sourceTree = "<group>"; };
+		7208C48525B74B4C0089EC82 /* QuizesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizesViewModel.swift; sourceTree = "<group>"; };
+		7208C48D25B74E690089EC82 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		722BED4D25B497A3008023B2 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		722BED5125B497B3008023B2 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		722BED5525B49D6B008023B2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		722BED5925B4A49D008023B2 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		72731AA925B47F4300F21370 /* SoccerQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72731AAC25B47F4300F21370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72731AB025B47F4300F21370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72731AB025B47F4300F21370 /* QuizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizesViewController.swift; sourceTree = "<group>"; };
 		72731AB325B47F4300F21370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72731AB525B47F4500F21370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72731AB825B47F4500F21370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		72B5D1FC25B4B4DB00761F9D /* LocalizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeKeys.swift; sourceTree = "<group>"; };
 		72B5D20425B4C1DA00761F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		72B5D20725B4C1EE00761F9D /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		72B5D20925B4C20E00761F9D /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
 		72F24DB025B61EE600B401BC /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
@@ -143,6 +145,15 @@
 				7203D14625B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7208C48425B74B2F0089EC82 /* Quizes screen */ = {
+			isa = PBXGroup;
+			children = (
+				72731AB025B47F4300F21370 /* QuizesViewController.swift */,
+				7208C48525B74B4C0089EC82 /* QuizesViewModel.swift */,
+			);
+			path = "Quizes screen";
 			sourceTree = "<group>";
 		};
 		722BED4B25B4977E008023B2 /* Auth */ = {
@@ -240,7 +251,7 @@
 		72731ACC25B4815200F21370 /* Main menu */ = {
 			isa = PBXGroup;
 			children = (
-				72731AB025B47F4300F21370 /* ViewController.swift */,
+				7208C48425B74B2F0089EC82 /* Quizes screen */,
 				72731AB225B47F4300F21370 /* Main.storyboard */,
 			);
 			path = "Main menu";
@@ -477,7 +488,7 @@
 			files = (
 				727972A025B74239008234D5 /* CoreOption.swift in Sources */,
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
-				72731AB125B47F4300F21370 /* ViewController.swift in Sources */,
+				72731AB125B47F4300F21370 /* QuizesViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
 				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
 				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
@@ -488,6 +499,7 @@
 				72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */,
 				722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */,
 				72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */,
+				7208C48625B74B4C0089EC82 /* QuizesViewModel.swift in Sources */,
 				72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */,
 				72F24DC225B622E100B401BC /* Theme.swift in Sources */,
 				72F24DFC25B6258B00B401BC /* Question.swift in Sources */,
@@ -527,7 +539,7 @@
 			children = (
 				72B5D20425B4C1DA00761F9D /* en */,
 				72B5D20725B4C1EE00761F9D /* en-US */,
-				72B5D20925B4C20E00761F9D /* ru-RU */,
+				7208C48D25B74E690089EC82 /* ru-RU */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

@@ -13,3 +13,6 @@
 "next" = "Дальше";
 "welcomeBackMessage" = "С возвращением, \n%@";
 "firstWelcomeMessage" = "Добро пожаловать, \n%@";
+
+// MARK: Quizes
+"selectThemeTitle" = "Выбери тему:";

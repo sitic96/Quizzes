@@ -25,7 +25,7 @@ class WelcomeBackViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
             self?.router.goToMainScreen()
         }
     }

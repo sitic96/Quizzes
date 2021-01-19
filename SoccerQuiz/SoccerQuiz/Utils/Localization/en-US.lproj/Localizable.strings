@@ -13,3 +13,7 @@
 "next" = "Next";
 "welcomeBackMessage" = "Welcome back, \n%@";
 "firstWelcomeMessage" = "Welcome, \n%@";
+
+// MARK: Quizes
+
+"selectThemeTitle" = "Select theme:";

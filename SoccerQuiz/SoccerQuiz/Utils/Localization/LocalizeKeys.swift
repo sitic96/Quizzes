@@ -15,4 +15,10 @@ struct LocalizeKeys {
         static let welcomeBackMessage = "welcomeBackMessage"
         static let firstWelcomeMessage = "firstWelcomeMessage"
     }
+
+    struct Main {
+        struct Quizes {
+            static let selectThemeTitle = "selectThemeTitle"
+        }
+    }
 }
