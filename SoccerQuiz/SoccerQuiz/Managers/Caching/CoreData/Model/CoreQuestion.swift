@@ -16,12 +16,26 @@ import CoreData
             throw CoreDataError.cantInitEnity(CoreQuestion.entityName)
         }
         super.init(entity: entityDescription, insertInto: context)
-        self.id = Int16(question.id)
+        self.id = Int32(question.id)
+
         switch question.topContent {
-        case .image(let urlString):
+        case .image(let content):
             self.topContentType = "image"
-        case .text(let data):
-            self.botContentType = "text"
+            self.topContent = try CoreContent(from: content, into: context)
+        case .text(let content):
+            self.topContentType = "text"
+            self.topContent = try CoreContent(from: content, into: context)
+        }
+
+        switch question.bottomContent {
+        case .dropBox(let options):
+            self.botContentType = "dropBox"
+            self.botContent = try NSSet(array: options.map { try CoreOption(from: $0,
+                                                                            into: context) })
+        case .options(let options):
+            self.botContentType = "4options"
+            self.botContent = try NSSet(array: options.map { try CoreOption(from: $0,
+                                                                            into: context) })
         }
     }
 }

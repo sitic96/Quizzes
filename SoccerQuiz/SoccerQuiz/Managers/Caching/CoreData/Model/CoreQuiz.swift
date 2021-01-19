@@ -17,6 +17,6 @@ import CoreData
             throw CoreDataError.cantInitEnity(CoreQuiz.entityName)
         }
         super.init(entity: entityDescriptor, insertInto: context)
-        self.id = Int16(quiz.id)
+        self.id = Int32(quiz.id)
     }
 }

@@ -37,6 +37,8 @@
 		72731AF325B484F400F21370 /* MontserratAlternates-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72731AE125B484F400F21370 /* MontserratAlternates-Black.ttf */; };
 		72731AF425B484F400F21370 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72731AE225B484F400F21370 /* MontserratAlternates-SemiBoldItalic.ttf */; };
 		72731AF525B484F400F21370 /* MontserratAlternates-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72731AE325B484F400F21370 /* MontserratAlternates-BoldItalic.ttf */; };
+		7279729D25B741F7008234D5 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279729C25B741F7008234D5 /* Option.swift */; };
+		727972A025B74239008234D5 /* CoreOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279729F25B74239008234D5 /* CoreOption.swift */; };
 		727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F2CD225B4D46D009EAB31 /* AuthRouter.swift */; };
 		72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5D1FC25B4B4DB00761F9D /* LocalizeKeys.swift */; };
 		72B5D20325B4C1DA00761F9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72B5D20525B4C1DA00761F9D /* Localizable.strings */; };
@@ -90,6 +92,8 @@
 		72731AE125B484F400F21370 /* MontserratAlternates-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Black.ttf"; sourceTree = "<group>"; };
 		72731AE225B484F400F21370 /* MontserratAlternates-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		72731AE325B484F400F21370 /* MontserratAlternates-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7279729C25B741F7008234D5 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		7279729F25B74239008234D5 /* CoreOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreOption.swift; sourceTree = "<group>"; };
 		727F2CD225B4D46D009EAB31 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		72B5D1FC25B4B4DB00761F9D /* LocalizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeKeys.swift; sourceTree = "<group>"; };
 		72B5D20425B4C1DA00761F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 				72F24DF225B6249500B401BC /* CoreQuiz.swift */,
 				72F24DF825B6255700B401BC /* CoreQuestion.swift */,
 				72F24DFE25B62A3000B401BC /* CoreContent.swift */,
+				7279729F25B74239008234D5 /* CoreOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				72F24DF525B624CE00B401BC /* Quiz.swift */,
 				72F24DFB25B6258B00B401BC /* Question.swift */,
 				72F24E0125B62A6A00B401BC /* Content.swift */,
+				7279729C25B741F7008234D5 /* Option.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727972A025B74239008234D5 /* CoreOption.swift in Sources */,
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
 				72731AB125B47F4300F21370 /* ViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
@@ -485,6 +492,7 @@
 				72F24DC225B622E100B401BC /* Theme.swift in Sources */,
 				72F24DFC25B6258B00B401BC /* Question.swift in Sources */,
 				72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */,
+				7279729D25B741F7008234D5 /* Option.swift in Sources */,
 				72731ACE25B481D200F21370 /* StyleManager.swift in Sources */,
 				72F24DF025B6240500B401BC /* CoreDataError.swift in Sources */,
 				72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */,

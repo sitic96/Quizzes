@@ -8,13 +8,13 @@
 import Foundation
 
 enum QuestionTopContentType {
-    case text(data: String)
-    case image(urlString: String)
+    case text(content: Content)
+    case image(content: Content)
 }
 
 enum QuestionBottomContentType {
-    case options(data: [String])
-    case dropBox(data: [String])
+    case options(options: [Option])
+    case dropBox(options: [Option])
 }
 
 struct Question {

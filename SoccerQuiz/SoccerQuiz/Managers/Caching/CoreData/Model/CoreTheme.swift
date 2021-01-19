@@ -18,7 +18,7 @@ import CoreData
             throw CoreDataError.cantInitEnity(CoreTheme.entityName)
         }
         super.init(entity: entityDescriptor, insertInto: context)
-        self.id = Int16(theme.id)
+        self.id = Int32(theme.id)
         self.isAvailable = theme.isAvailable
         self.name = theme.name
     }

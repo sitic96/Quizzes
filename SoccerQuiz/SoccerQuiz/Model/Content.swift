@@ -8,6 +8,6 @@
 import Foundation
 
 struct Content {
-    let id: String
+    let id: Int
     let data: String
 }

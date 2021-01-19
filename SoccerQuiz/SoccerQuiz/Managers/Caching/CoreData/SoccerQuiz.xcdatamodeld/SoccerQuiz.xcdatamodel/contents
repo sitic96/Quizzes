@@ -2,7 +2,17 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreContent" representedClassName="CoreContent" syncable="YES" codeGenerationType="category">
         <attribute name="data" attributeType="String"/>
-        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CoreOption" representedClassName="CoreOption" syncable="YES" codeGenerationType="category">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -11,9 +21,9 @@
     </entity>
     <entity name="CoreQuestion" representedClassName="CoreQuestion" syncable="YES" codeGenerationType="category">
         <attribute name="botContentType" attributeType="String"/>
-        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="topContentType" attributeType="String"/>
-        <relationship name="botContent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreContent"/>
+        <relationship name="botContent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreOption"/>
         <relationship name="quiz" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
         <relationship name="topContent" maxCount="1" deletionRule="Nullify" destinationEntity="CoreContent"/>
         <uniquenessConstraints>
@@ -23,7 +33,7 @@
         </uniquenessConstraints>
     </entity>
     <entity name="CoreQuiz" representedClassName="CoreQuiz" syncable="YES" codeGenerationType="category">
-        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
@@ -32,7 +42,7 @@
         </uniquenessConstraints>
     </entity>
     <entity name="CoreTheme" representedClassName="CoreTheme" syncable="YES" codeGenerationType="category">
-        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isAvailable" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="quizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
@@ -43,9 +53,10 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="CoreQuiz" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="CoreQuestion" positionX="-54" positionY="0" width="128" height="133"/>
         <element name="CoreContent" positionX="-36" positionY="45" width="128" height="73"/>
+        <element name="CoreQuestion" positionX="-54" positionY="0" width="128" height="133"/>
+        <element name="CoreQuiz" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="CoreTheme" positionX="-27" positionY="72" width="128" height="103"/>
+        <element name="CoreOption" positionX="-54" positionY="54" width="128" height="88"/>
     </elements>
 </model>
