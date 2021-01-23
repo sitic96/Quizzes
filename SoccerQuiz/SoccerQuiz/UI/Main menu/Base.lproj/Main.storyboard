@@ -185,7 +185,7 @@
                         <outlet property="appTitleLabel" destination="b3D-pS-fBF" id="Toc-NH-5o1"/>
                         <outlet property="ballImageView" destination="CCI-nn-P0I" id="kuV-y7-WvX"/>
                         <outlet property="ballsNumberLabel" destination="K2c-Rz-4e9" id="ley-ou-RDU"/>
-                        <outlet property="themesCollectionView" destination="fF6-uh-Oq9" id="lTa-Ls-tOT"/>
+                        <outlet property="quizzesCollectionView" destination="fF6-uh-Oq9" id="lTa-Ls-tOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

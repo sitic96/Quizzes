@@ -21,7 +21,7 @@ extension WelcomeBackRouter: WelcomeBackRouterProtocol {
               let mainScreenFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() as? QuizzesViewController else {
             return
         }
-        mainScreenFirstController.viewModel = QuizesViewModel()
+        mainScreenFirstController.viewModel = QuizesViewModel(quizzes: Quiz.fakeArray())
         controller?.view.window?.rootViewController = mainScreenFirstController
         UIView.transition(with: window, duration: 0.3,
                           options: .transitionCrossDissolve, animations: nil)
