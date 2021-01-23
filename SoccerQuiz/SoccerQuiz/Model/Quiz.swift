@@ -9,4 +9,7 @@ import Foundation
 
 struct Quiz {
     let id: Int
+    let title: String
+    let description: String
+    let imageURLString: String
 }
