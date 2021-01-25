@@ -81,7 +81,25 @@ extension Question {
                                                               title: "Palyer #3"),
                                                        Option(id: 3,
                                                               type: .player,
-                                                              title: "Palyer #4")]))
+                                                              title: "Palyer #4")])),
+            Question(id: 4,
+                     answer: [Option(id: 4,
+                                     type: .player,
+                                     title: "Palyer #5")],
+                     topContent: .text(content: Content(id: 3,
+                                                        data: "Who's the best player #4?")),
+                     bottomContent: .options(options: [Option(id: 0,
+                                                              type: .player,
+                                                              title: "Palyer #1"),
+                                                       Option(id: 1,
+                                                              type: .player,
+                                                              title: "Palyer #2"),
+                                                       Option(id: 2,
+                                                              type: .player,
+                                                              title: "Palyer #3"),
+                                                       Option(id: 4,
+                                                              type: .player,
+                                                              title: "Palyer #5")]))
         ]
     }
 }

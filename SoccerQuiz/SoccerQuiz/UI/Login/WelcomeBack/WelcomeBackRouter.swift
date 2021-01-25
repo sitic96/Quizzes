@@ -18,10 +18,12 @@ struct WelcomeBackRouter {
 extension WelcomeBackRouter: WelcomeBackRouterProtocol {
     func goToMainScreen() {
         guard let window = UIApplication.shared.keyWindow,
-              let mainScreenFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() as? QuizzesViewController else {
+              let mainScreenFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController() as? UINavigationController,
+              let quizzesVC = mainScreenFirstController.viewControllers.first as? QuizzesViewController else {
             return
         }
-        mainScreenFirstController.viewModel = QuizesViewModel(quizzes: Quiz.fakeArray())
+        quizzesVC.viewModel = QuizesViewModel(quizzes: Quiz.fakeArray())
+        quizzesVC.router = QuizzesRouter(controller: quizzesVC)
         controller?.view.window?.rootViewController = mainScreenFirstController
         UIView.transition(with: window, duration: 0.3,
                           options: .transitionCrossDissolve, animations: nil)

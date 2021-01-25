@@ -14,11 +14,19 @@ enum AvailabilityStatus: Comparable {
     case notAvailable
 }
 
+enum QuizQuestionStatus: CaseIterable {
+    case notStarted
+    case started
+    case finished
+}
+
+typealias QuizQuestion = (question: Question, status: QuizQuestionStatus)
+
 struct Quiz {
     let id: Int
     let title: String
     let description: String
     let imageURLString: String
     let availabilityStatus: AvailabilityStatus
-    let questiona: [Question]
+    let questions: [QuizQuestion]
 }

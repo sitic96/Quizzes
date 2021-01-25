@@ -20,6 +20,7 @@ class QuizzesViewController: UIViewController {
     @IBOutlet private weak var quizzesCollectionView: UICollectionView!
 
     var viewModel: QuizesViewModelProtocol!
+    var router: QuizzesRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,6 +112,11 @@ extension QuizzesViewController: UICollectionViewDelegate, UICollectionViewDataS
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Const.quizzesCellSpacing
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        router.goToDetails(of: viewModel.allQuizzes[indexPath.item])
     }
 }
 
