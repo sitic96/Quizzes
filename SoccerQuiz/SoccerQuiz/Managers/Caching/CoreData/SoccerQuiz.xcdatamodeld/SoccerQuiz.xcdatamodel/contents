@@ -34,18 +34,10 @@
     </entity>
     <entity name="CoreQuiz" representedClassName="CoreQuiz" syncable="YES" codeGenerationType="category">
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" attributeType="String"/>
+        <attribute name="subtitle" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="id"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
-    </entity>
-    <entity name="CoreTheme" representedClassName="CoreTheme" syncable="YES" codeGenerationType="category">
-        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="isAvailable" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="name" attributeType="String"/>
-        <relationship name="quizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -54,9 +46,8 @@
     </entity>
     <elements>
         <element name="CoreContent" positionX="-36" positionY="45" width="128" height="73"/>
-        <element name="CoreQuestion" positionX="-54" positionY="0" width="128" height="133"/>
-        <element name="CoreQuiz" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="CoreTheme" positionX="-27" positionY="72" width="128" height="103"/>
         <element name="CoreOption" positionX="-54" positionY="54" width="128" height="88"/>
+        <element name="CoreQuestion" positionX="-54" positionY="0" width="128" height="133"/>
+        <element name="CoreQuiz" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

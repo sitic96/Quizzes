@@ -8,11 +8,19 @@
 import Foundation
 
 struct LocalizeKeys {
+    static let appTitle = "appTitle"
+
     struct Auth {
         static let welcomeMessage = "welcomeMessage"
         static let namePlaceholder = "namePlaceholder"
         static let next = "next"
         static let welcomeBackMessage = "welcomeBackMessage"
         static let firstWelcomeMessage = "firstWelcomeMessage"
+    }
+
+    struct Main {
+        struct Quizes {
+            static let selectThemeTitle = "selectThemeTitle"
+        }
     }
 }

@@ -16,6 +16,7 @@ struct StyleManager {
 
             struct Text {
                 static let placeholderColor = #colorLiteral(red: 0.8352941176, green: 0.8470588235, blue: 0.8823529412, alpha: 1)
+                static let darkGreyColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
                 static let mainColor = #colorLiteral(red: 0.05882352941, green: 0.06666666667, blue: 0.1058823529, alpha: 1)
                 static let whiteColor = UIColor.white
             }
@@ -24,10 +25,21 @@ struct StyleManager {
         struct Fonts {
             static let titleFont = UIFont(name: "MontserratAlternates-Bold",
                                           size: 28.0)!
+            static let subtitleFont = UIFont(name: "MontserratAlternates-SemiBold",
+                                          size: 20.0)!
             static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
                                                 size: 12.0)!
             static let mainFont = UIFont(name: "MontserratAlternates-Light",
                                          size: 18.0)!
+            static let subHeaderFont = UIFont(name: "MontserratAlternates-Light",
+                                              size: 16.0)!
         }
+    }
+
+    struct MainScreen {
+        static let backgroundColor = #colorLiteral(red: 0.937254902, green: 0.9529411765, blue: 0.968627451, alpha: 1)
+        static let finishedOverlayColor = #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.5)
+        static let availableOverlayColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.7)
+        static let notAvailableOverlayColor = #colorLiteral(red: 0.5741485357, green: 0.5741624236, blue: 0.574154973, alpha: 0.7)
     }
 }

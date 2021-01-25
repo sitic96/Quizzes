@@ -27,6 +27,7 @@ class AuthViewController: UIViewController {
                             for: .editingChanged)
         goNextButton.isEnabled = false
         goNextButton.alpha = Const.nextButtonDisabledAlpha
+        logoImageView.image = #imageLiteral(resourceName: "logo")
         setupStyle()
         localize()
         bindViewModel()

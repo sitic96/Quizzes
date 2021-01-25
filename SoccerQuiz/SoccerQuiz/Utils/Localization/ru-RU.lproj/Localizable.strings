@@ -6,6 +6,8 @@
   
 */
 
+"appTitle" = "Football Quizzes";
+
 // MARK: Login screen
 
 "welcomeMessage" = "Привет!";
@@ -13,3 +15,6 @@
 "next" = "Дальше";
 "welcomeBackMessage" = "С возвращением, \n%@";
 "firstWelcomeMessage" = "Добро пожаловать, \n%@";
+
+// MARK: Quizes
+"selectThemeTitle" = "Выбери тему:";
