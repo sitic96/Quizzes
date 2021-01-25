@@ -1,0 +1,87 @@
+//
+//  Question+fakeArray.swift
+//  SoccerQuiz
+//
+//  Created by Sitora Guliamova on 1/25/21.
+//
+
+import Foundation
+
+extension Question {
+    static func fakeArray() -> [Question] {
+        return [
+            Question(id: 0,
+                     answer: [Option(id: 0,
+                                     type: .player,
+                                     title: "Palyer #1")],
+                     topContent: .text(content: Content(id: 0,
+                                                        data: "Who's the best player?")),
+                     bottomContent: .options(options: [Option(id: 0,
+                                                              type: .player,
+                                                              title: "Palyer #1"),
+                                                       Option(id: 1,
+                                                              type: .player,
+                                                              title: "Palyer #2"),
+                                                       Option(id: 2,
+                                                              type: .player,
+                                                              title: "Palyer #3"),
+                                                       Option(id: 3,
+                                                              type: .player,
+                                                              title: "Palyer #4")])),
+            Question(id: 1,
+                     answer: [Option(id: 1,
+                                     type: .player,
+                                     title: "Palyer #2")],
+                     topContent: .text(content: Content(id: 1,
+                                                        data: "Who's the best player #2?")),
+                     bottomContent: .options(options: [Option(id: 0,
+                                                              type: .player,
+                                                              title: "Palyer #1"),
+                                                       Option(id: 1,
+                                                              type: .player,
+                                                              title: "Palyer #2"),
+                                                       Option(id: 2,
+                                                              type: .player,
+                                                              title: "Palyer #3"),
+                                                       Option(id: 3,
+                                                              type: .player,
+                                                              title: "Palyer #4")])),
+            Question(id: 2,
+                     answer: [Option(id: 2,
+                                     type: .player,
+                                     title: "Palyer #3")],
+                     topContent: .text(content: Content(id: 2,
+                                                        data: "Who's the best player #3?")),
+                     bottomContent: .options(options: [Option(id: 0,
+                                                              type: .player,
+                                                              title: "Palyer #1"),
+                                                       Option(id: 1,
+                                                              type: .player,
+                                                              title: "Palyer #2"),
+                                                       Option(id: 2,
+                                                              type: .player,
+                                                              title: "Palyer #3"),
+                                                       Option(id: 3,
+                                                              type: .player,
+                                                              title: "Palyer #4")])),
+            Question(id: 3,
+                     answer: [Option(id: 3,
+                                     type: .player,
+                                     title: "Palyer #4")],
+                     topContent: .text(content: Content(id: 3,
+                                                        data: "Who's the best player #4?")),
+                     bottomContent: .options(options: [Option(id: 0,
+                                                              type: .player,
+                                                              title: "Palyer #1"),
+                                                       Option(id: 1,
+                                                              type: .player,
+                                                              title: "Palyer #2"),
+                                                       Option(id: 2,
+                                                              type: .player,
+                                                              title: "Palyer #3"),
+                                                       Option(id: 3,
+                                                              type: .player,
+                                                              title: "Palyer #4")]))
+        ]
+    }
+}
