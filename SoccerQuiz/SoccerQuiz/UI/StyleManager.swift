@@ -38,5 +38,8 @@ struct StyleManager {
 
     struct MainScreen {
         static let backgroundColor = #colorLiteral(red: 0.937254902, green: 0.9529411765, blue: 0.968627451, alpha: 1)
+        static let finishedOverlayColor = #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 0.5)
+        static let availableOverlayColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.7)
+        static let notAvailableOverlayColor = #colorLiteral(red: 0.5741485357, green: 0.5741624236, blue: 0.574154973, alpha: 0.7)
     }
 }

@@ -119,6 +119,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="imageView" destination="TZV-Oy-Eaz" id="SI2-Tg-voS"/>
+                                            <outlet property="overlayView" destination="kL4-lp-16U" id="jSx-bX-UeP"/>
                                             <outlet property="quizNameLabel" destination="gA8-Pf-68C" id="6Mf-ON-fvp"/>
                                         </connections>
                                     </collectionViewCell>

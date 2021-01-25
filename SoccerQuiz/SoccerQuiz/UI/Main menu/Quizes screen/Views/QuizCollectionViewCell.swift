@@ -13,6 +13,7 @@ class QuizCollectionViewCell: UICollectionViewCell {
     }
 
     @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var overlayView: UIView!
     @IBOutlet private weak var quizNameLabel: UILabel!
 
     override func prepareForReuse() {
@@ -27,8 +28,10 @@ class QuizCollectionViewCell: UICollectionViewCell {
     }
 
     func setupStyle(titleLabelFont: UIFont,
-                    titleLabelTextColor: UIColor) {
+                    titleLabelTextColor: UIColor,
+                    overlayColor: UIColor) {
         quizNameLabel.font = titleLabelFont
         quizNameLabel.textColor = titleLabelTextColor
+        overlayView.backgroundColor = overlayColor
     }
 }
