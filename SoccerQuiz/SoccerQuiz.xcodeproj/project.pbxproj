@@ -13,6 +13,7 @@
 		722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5125B497B3008023B2 /* WelcomeBackViewController.swift */; };
 		722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5525B49D6B008023B2 /* AuthViewModel.swift */; };
 		722BED5A25B4A49D008023B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722BED5925B4A49D008023B2 /* Const.swift */; };
+		72503DFE25BF5A8A000F9814 /* Question+fakeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72503DFD25BF5A8A000F9814 /* Question+fakeArray.swift */; };
 		72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AAC25B47F4300F21370 /* AppDelegate.swift */; };
 		72731AB125B47F4300F21370 /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72731AB025B47F4300F21370 /* QuizzesViewController.swift */; };
 		72731AB425B47F4300F21370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72731AB225B47F4300F21370 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		722BED5125B497B3008023B2 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		722BED5525B49D6B008023B2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		722BED5925B4A49D008023B2 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		72503DFD25BF5A8A000F9814 /* Question+fakeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+fakeArray.swift"; sourceTree = "<group>"; };
 		72731AA925B47F4300F21370 /* SoccerQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72731AAC25B47F4300F21370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72731AB025B47F4300F21370 /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				72B0C26325BA10FC00CDFC70 /* Quiz+fakeArray.swift */,
+				72503DFD25BF5A8A000F9814 /* Question+fakeArray.swift */,
 			);
 			path = FakeData;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
 				72731AB125B47F4300F21370 /* QuizzesViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
+				72503DFE25BF5A8A000F9814 /* Question+fakeArray.swift in Sources */,
 				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
 				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,

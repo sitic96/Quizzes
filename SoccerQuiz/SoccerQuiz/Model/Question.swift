@@ -7,18 +7,19 @@
 
 import Foundation
 
-enum QuestionTopContentType {
+enum QuestionTopContent {
     case text(content: Content)
     case image(content: Content)
 }
 
-enum QuestionBottomContentType {
+enum QuestionBottomContent {
     case options(options: [Option])
     case dropBox(options: [Option])
 }
 
 struct Question {
     let id: Int
-    let topContent: QuestionTopContentType
-    let bottomContent: QuestionBottomContentType
+    let answer: [Option]
+    let topContent: QuestionTopContent
+    let bottomContent: QuestionBottomContent
 }

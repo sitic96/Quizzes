@@ -20,4 +20,5 @@ struct Quiz {
     let description: String
     let imageURLString: String
     let availabilityStatus: AvailabilityStatus
+    let questiona: [Question]
 }
