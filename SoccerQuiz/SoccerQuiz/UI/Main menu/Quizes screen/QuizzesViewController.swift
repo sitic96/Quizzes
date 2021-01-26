@@ -25,7 +25,10 @@ class QuizzesViewController: UIViewController {
         setupView()
         navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: StyleManager.General.Colors.mainColor,
-             NSAttributedString.Key.font: StyleManager.General.Fonts.titleFont]
+             NSAttributedString.Key.font: StyleManager.General.Fonts.subtitleFont]
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = StyleManager.General.Colors.mainColor
     }
 
     private func setupStyle() {

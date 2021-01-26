@@ -8,7 +8,6 @@
 import UIKit
 
 class QuizDetailsViewController: UIViewController {
-    @IBOutlet private weak var quizTitleLabel: UILabel!
     @IBOutlet private weak var quizDescriptionLabel: UILabel!
     @IBOutlet private weak var questionsCollectionView: UICollectionView!
 
@@ -23,15 +22,12 @@ class QuizDetailsViewController: UIViewController {
     private func setupStyle() {
         view.backgroundColor = StyleManager.QuizDetailsScreen.backgroundColor
 
-        quizTitleLabel.font = StyleManager.General.Fonts.titleFont
-        quizTitleLabel.textColor = StyleManager.General.Colors.mainColor
-
         quizDescriptionLabel.font = StyleManager.General.Fonts.subHeaderFont
         quizDescriptionLabel.textColor = StyleManager.General.Colors.Text.mainColor
     }
 
     private func setupContent() {
-        quizTitleLabel.text = viewModel.quizTitle
+        title = viewModel.quizTitle
         quizDescriptionLabel.text = viewModel.quizDescription
     }
 }
