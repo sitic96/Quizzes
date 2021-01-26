@@ -14,9 +14,6 @@ enum ShowQuizzesViewState {
 }
 
 class QuizzesViewController: UIViewController {
-    @IBOutlet private weak var appTitleLabel: UILabel!
-    @IBOutlet private weak var ballImageView: UIImageView!
-    @IBOutlet private weak var ballsNumberLabel: UILabel!
     @IBOutlet private weak var quizzesCollectionView: UICollectionView!
 
     var viewModel: QuizesViewModelProtocol!
@@ -26,22 +23,17 @@ class QuizzesViewController: UIViewController {
         super.viewDidLoad()
         setupStyle()
         setupView()
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: StyleManager.General.Colors.mainColor,
+             NSAttributedString.Key.font: StyleManager.General.Fonts.titleFont]
     }
 
     private func setupStyle() {
         view.backgroundColor = StyleManager.MainScreen.backgroundColor
-
-        appTitleLabel.textColor = StyleManager.General.Colors.mainColor
-        appTitleLabel.font = StyleManager.General.Fonts.titleFont
-
-        ballsNumberLabel.textColor = StyleManager.General.Colors.Text.mainColor
-        ballsNumberLabel.font = StyleManager.General.Fonts.titleFont
     }
 
     private func setupView() {
-        appTitleLabel.text = viewModel.appTitle.localized()
-        ballImageView.image = #imageLiteral(resourceName: "pointsImage.png")
-        ballsNumberLabel.text = "\(viewModel.pointsNumber)"
+        title = viewModel.appTitle.localized()
     }
 }
 
@@ -60,9 +52,13 @@ extension QuizzesViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionReusableView()
         }
         reusableView.setupContent(logoImage: #imageLiteral(resourceName: "logo_ball"),
-                                  title: LocalizeKeys.Main.Quizes.selectThemeTitle.localized())
+                                  title: LocalizeKeys.Main.Quizes.selectThemeTitle.localized(),
+                                  pointsLogo: #imageLiteral(resourceName: "pointsImage.png"),
+                                  pointsNumber: "\(viewModel.pointsNumber)")
         reusableView.setupStyle(selectQuizFont: StyleManager.General.Fonts.titleFont,
-                                selectQuizTextColor: StyleManager.General.Colors.Text.mainColor)
+                                selectQuizTextColor: StyleManager.General.Colors.Text.mainColor,
+                                pointsFont: StyleManager.General.Fonts.titleFont,
+                                pointsTextColor: StyleManager.General.Colors.Text.mainColor)
         return reusableView
     }
 
