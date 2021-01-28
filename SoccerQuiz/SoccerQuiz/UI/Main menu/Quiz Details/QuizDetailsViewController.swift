@@ -12,11 +12,19 @@ class QuizDetailsViewController: UIViewController {
     @IBOutlet private weak var questionsCollectionView: UICollectionView!
 
     var viewModel: QuizDetailsViewModelProtocol!
+    var router: QuizDetailsRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
         setupStyle()
         setupContent()
+    }
+
+    private func bindViewModel() {
+        viewModel.didSelectGoToQuestions = { [weak self] questions in
+            self?.router.gotToQuestions(questions)
+        }
     }
 
     private func setupStyle() {
@@ -76,6 +84,11 @@ extension QuizDetailsViewController: UICollectionViewDelegate, UICollectionViewD
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Const.questionsCellOffset
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectQuestion(at: indexPath.item)
     }
 }
 

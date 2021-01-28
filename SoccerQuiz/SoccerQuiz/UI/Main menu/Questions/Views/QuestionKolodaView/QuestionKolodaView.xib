@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="QuestionKolodaView" id="iN0-l3-epB" customClass="QuestionKolodaView" customModule="SoccerQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="660"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDq-Gb-kDM" customClass="TopContentView" customModule="SoccerQuiz" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="315"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-kd-7yP" customClass="BottomContentView" customModule="SoccerQuiz" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="345" width="450" height="315"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ugO-kd-7yP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6dz-QR-ILQ"/>
+                <constraint firstItem="ugO-kd-7yP" firstAttribute="top" secondItem="TDq-Gb-kDM" secondAttribute="bottom" constant="30" id="Ptb-Nf-vX5"/>
+                <constraint firstItem="TDq-Gb-kDM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WNN-L8-SdU"/>
+                <constraint firstAttribute="bottom" secondItem="ugO-kd-7yP" secondAttribute="bottom" id="eRl-Zh-vtI"/>
+                <constraint firstItem="TDq-Gb-kDM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eln-ex-t0J"/>
+                <constraint firstItem="ugO-kd-7yP" firstAttribute="height" secondItem="TDq-Gb-kDM" secondAttribute="height" id="iVw-eZ-i6h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TDq-Gb-kDM" secondAttribute="trailing" id="pho-fo-cJM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ugO-kd-7yP" secondAttribute="trailing" id="uNw-yL-HEo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomContentView" destination="ugO-kd-7yP" id="3Za-2c-0YR"/>
+                <outlet property="topContentView" destination="TDq-Gb-kDM" id="8Ux-MH-wnh"/>
+            </connections>
+            <point key="canvasLocation" x="-223" y="-115"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

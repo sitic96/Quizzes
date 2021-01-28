@@ -2,4 +2,6 @@ target 'SoccerQuiz' do
   use_frameworks!
     pod 'Alamofire'
     pod 'Localize-Swift'
+    pod 'Koloda'
+    pod 'Kingfisher'
 end

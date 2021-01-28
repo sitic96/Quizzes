@@ -271,6 +271,57 @@
             </objects>
             <point key="canvasLocation" x="383" y="94"/>
         </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="0no-ez-bCD">
+            <objects>
+                <viewController storyboardIdentifier="QuestionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eOC-Qg-Ice" customClass="QuestionsViewController" customModule="SoccerQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRf-fi-PUz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-Fp-gpY">
+                                <rect key="frame" x="41.5" y="184" width="331" height="538"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-rr-n7G">
+                                        <rect key="frame" x="0.0" y="430.5" width="331" height="107.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-Zx-lm6" customClass="KolodaView" customModule="Koloda">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="405.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hBQ-Zx-lm6" secondAttribute="trailing" id="Ef2-BR-uL9"/>
+                                    <constraint firstItem="hBQ-Zx-lm6" firstAttribute="top" secondItem="3rk-Fp-gpY" secondAttribute="top" id="Jcj-Bf-xhe"/>
+                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="height" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="0.2" id="M22-uF-wWe"/>
+                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="top" secondItem="hBQ-Zx-lm6" secondAttribute="bottom" constant="25" id="aNy-Or-9yg"/>
+                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="ct3-xG-WsC"/>
+                                    <constraint firstAttribute="width" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="8:13" id="r1Q-4A-Rnn"/>
+                                    <constraint firstAttribute="trailing" secondItem="wBY-rr-n7G" secondAttribute="trailing" id="uK8-S1-BjO"/>
+                                    <constraint firstItem="hBQ-Zx-lm6" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="vAz-m8-yOr"/>
+                                    <constraint firstAttribute="bottom" secondItem="wBY-rr-n7G" secondAttribute="bottom" id="y34-ge-aSO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lwb-rw-lf8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerX" secondItem="lwb-rw-lf8" secondAttribute="centerX" id="SmK-3r-MmO"/>
+                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="width" secondItem="GRf-fi-PUz" secondAttribute="width" multiplier="0.8" id="oFV-y8-gk7"/>
+                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerY" secondItem="lwb-rw-lf8" secondAttribute="centerY" id="s5X-hL-f6M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="hBQ-Zx-lm6" id="Z9b-Qz-n9L"/>
+                        <outlet property="optionsStackView" destination="wBY-rr-n7G" id="a9t-Kp-p3O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6j-fH-O9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo_ball" width="200" height="200"/>

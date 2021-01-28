@@ -1,25 +1,37 @@
 PODS:
   - Alamofire (5.4.0)
+  - Kingfisher (6.0.1)
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
   - Localize-Swift (3.2.0):
     - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
     - Localize-Swift/UIKit (= 3.2.0)
   - Localize-Swift/LocalizeSwiftCore (3.2.0)
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
+  - pop (1.0.12)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
+  - Koloda
   - Localize-Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
+    - Koloda
     - Localize-Swift
+    - pop
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: d6f7f3433223564090582e34388a7bc5ee741d60
+PODFILE CHECKSUM: 37fa41dd964daa3ef65ea1b4f12a6fd7af15eefd
 
 COCOAPODS: 1.10.0

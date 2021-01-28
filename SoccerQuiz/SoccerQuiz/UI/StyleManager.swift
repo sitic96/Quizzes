@@ -54,4 +54,8 @@ struct StyleManager {
     struct WelcomeScreen {
         static let logoImageWithText = #imageLiteral(resourceName: "logo")
     }
+
+    struct QuestionsScreen {
+        static let backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7)
+    }
 }
