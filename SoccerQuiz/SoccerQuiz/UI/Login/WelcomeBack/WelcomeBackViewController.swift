@@ -19,7 +19,6 @@ class WelcomeBackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
-        logoImageView.image = #imageLiteral(resourceName: "logo")
         welcomeLabel.text = String(format: viewModel.welcomeMessageLocalizeKey.localized(),
                                    viewModel.userName)
     }
@@ -32,6 +31,7 @@ class WelcomeBackViewController: UIViewController {
     }
 
     private func setupStyle() {
+        logoImageView.image = StyleManager.WelcomeScreen.logoImageWithText
         welcomeLabel.font = StyleManager.General.Fonts.titleFont
     }
 }

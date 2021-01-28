@@ -24,7 +24,7 @@ extension Quiz {
                         .map { QuizQuestion(question: $0,
                                             status: QuizQuestionStatus.allCases.randomElement()!) }),
                 Quiz(id: 2, title: "First quiz with long name",
-                     description: "I'm your first quiz and my name is real long",
+                     description: "I'm your first quiz and my name is real long. Really looooong name",
                      imageURLString: "",
                      availabilityStatus: .available,
                      questions: Question.fakeArray()

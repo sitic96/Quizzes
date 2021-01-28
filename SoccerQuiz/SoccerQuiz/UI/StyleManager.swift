@@ -50,4 +50,8 @@ struct StyleManager {
         static let notFinishedBorderColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
         static let notStartedBorderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
+
+    struct WelcomeScreen {
+        static let logoImageWithText = #imageLiteral(resourceName: "logo")
+    }
 }
