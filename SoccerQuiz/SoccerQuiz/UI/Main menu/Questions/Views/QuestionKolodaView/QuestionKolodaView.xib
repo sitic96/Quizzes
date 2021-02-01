@@ -3,8 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,29 +15,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDq-Gb-kDM" customClass="TopContentView" customModule="SoccerQuiz" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="450" height="315"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="370.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-kd-7yP" customClass="BottomContentView" customModule="SoccerQuiz" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="345" width="450" height="315"/>
+                    <rect key="frame" x="0.0" y="400.5" width="450" height="259.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-dp-DrW">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="660"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ugO-kd-7yP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6dz-QR-ILQ"/>
+                <constraint firstAttribute="trailing" secondItem="p3W-dp-DrW" secondAttribute="trailing" id="1OG-7S-ys4"/>
+                <constraint firstItem="ugO-kd-7yP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6dz-QR-ILQ"/>
+                <constraint firstItem="p3W-dp-DrW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="E3q-jc-Ebu"/>
+                <constraint firstItem="p3W-dp-DrW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lcm-ph-UzG"/>
                 <constraint firstItem="ugO-kd-7yP" firstAttribute="top" secondItem="TDq-Gb-kDM" secondAttribute="bottom" constant="30" id="Ptb-Nf-vX5"/>
                 <constraint firstItem="TDq-Gb-kDM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WNN-L8-SdU"/>
                 <constraint firstAttribute="bottom" secondItem="ugO-kd-7yP" secondAttribute="bottom" id="eRl-Zh-vtI"/>
-                <constraint firstItem="TDq-Gb-kDM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eln-ex-t0J"/>
-                <constraint firstItem="ugO-kd-7yP" firstAttribute="height" secondItem="TDq-Gb-kDM" secondAttribute="height" id="iVw-eZ-i6h"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TDq-Gb-kDM" secondAttribute="trailing" id="pho-fo-cJM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ugO-kd-7yP" secondAttribute="trailing" id="uNw-yL-HEo"/>
+                <constraint firstItem="TDq-Gb-kDM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eln-ex-t0J"/>
+                <constraint firstItem="ugO-kd-7yP" firstAttribute="height" secondItem="TDq-Gb-kDM" secondAttribute="height" multiplier="0.7" id="iVw-eZ-i6h"/>
+                <constraint firstAttribute="bottom" secondItem="p3W-dp-DrW" secondAttribute="bottom" id="mIL-Lh-JLA"/>
+                <constraint firstAttribute="trailing" secondItem="TDq-Gb-kDM" secondAttribute="trailing" id="pho-fo-cJM"/>
+                <constraint firstAttribute="trailing" secondItem="ugO-kd-7yP" secondAttribute="trailing" id="uNw-yL-HEo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bottomContentView" destination="ugO-kd-7yP" id="3Za-2c-0YR"/>
+                <outlet property="overlayView" destination="p3W-dp-DrW" id="P9J-rO-QDc"/>
                 <outlet property="topContentView" destination="TDq-Gb-kDM" id="8Ux-MH-wnh"/>
             </connections>
             <point key="canvasLocation" x="-223" y="-115"/>

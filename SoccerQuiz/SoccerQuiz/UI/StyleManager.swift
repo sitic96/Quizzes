@@ -14,6 +14,7 @@ struct StyleManager {
             static let mainColor = #colorLiteral(red: 0.9058823529, green: 0.3921568627, blue: 0.3176470588, alpha: 1)
             static let gradientStartColor = #colorLiteral(red: 0.8901960784, green: 0.462745098, blue: 0.3411764706, alpha: 1)
             static let gradientFinishColor = #colorLiteral(red: 0.8588235294, green: 0.4, blue: 0.3411764706, alpha: 1)
+            static let white = UIColor.white
 
             struct Text {
                 static let placeholderColor = #colorLiteral(red: 0.8352941176, green: 0.8470588235, blue: 0.8823529412, alpha: 1)
@@ -28,12 +29,14 @@ struct StyleManager {
                                           size: 28.0)!
             static let subtitleFont = UIFont(name: "MontserratAlternates-SemiBold",
                                           size: 20.0)!
-            static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
-                                                size: 12.0)!
             static let mainFont = UIFont(name: "MontserratAlternates-Light",
                                          size: 18.0)!
+            static let semibolMainFont = UIFont(name: "MontserratAlternates-SemiBold",
+                                                size: 18.0)!
             static let subHeaderFont = UIFont(name: "MontserratAlternates-Light",
                                               size: 16.0)!
+            static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
+                                                size: 12.0)!
         }
     }
 

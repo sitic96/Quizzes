@@ -20,29 +20,36 @@ class BottomContentView: UIView {
         topStackView.axis = .horizontal
         topStackView.alignment = .fill
         topStackView.distribution = .fillEqually
+        topStackView.spacing = Const.stackViewSpacing
         topStackView.tag = 0
         let bottomStackView = UIStackView()
         bottomStackView.axis = .horizontal
         bottomStackView.alignment = .fill
         bottomStackView.distribution = .fillEqually
+        bottomStackView.spacing = Const.stackViewSpacing
         bottomStackView.tag = 1
         let mainStackView = UIStackView()
         mainStackView.axis = .vertical
         mainStackView.distribution = .fillEqually
         mainStackView.addArrangedSubview(topStackView)
         mainStackView.addArrangedSubview(bottomStackView)
+        mainStackView.spacing = Const.stackViewSpacing
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         return mainStackView
     }()
 
     private func setupConstraints(for view: UIView) {
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                      constant: Const.contentOffset).isActive = true
+        view.bottomAnchor.constraint(equalTo: bottomAnchor,
+                                     constant: -Const.contentOffset).isActive = true
+        view.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                       constant: -Const.contentOffset).isActive = true
     }
 
     func setup(type: BottomContentType, options: [Option]) {
+        backgroundColor = .clear
         switch type {
         case .options(let style):
             addSubview(stackView)
@@ -53,6 +60,9 @@ class BottomContentView: UIView {
                 label.font = style.font
                 label.textColor = style.textColor
                 label.textAlignment = .center
+                label.backgroundColor = StyleManager.General.Colors.white
+                label.clipsToBounds = true
+                label.layer.cornerRadius = Const.labelCornerRadius
                 if i < 2 {
                     (stackView.arrangedSubviews
                         .first(where: { $0.tag == 0 }) as? UIStackView)?.addArrangedSubview(label)
@@ -65,4 +75,10 @@ class BottomContentView: UIView {
             break
         }
     }
+}
+
+fileprivate extension Const {
+    static let contentOffset: CGFloat = 20.0
+    static let stackViewSpacing: CGFloat = 20.0
+    static let labelCornerRadius: CGFloat = 5.0
 }

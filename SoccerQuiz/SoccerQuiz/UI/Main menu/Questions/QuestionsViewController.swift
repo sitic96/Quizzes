@@ -20,7 +20,8 @@ class QuestionsViewController: UIViewController {
         
         kolodaView.delegate = self
         kolodaView.dataSource = self
-        kolodaView.backgroundCardsScalePercent = 0.8
+        kolodaView.backgroundCardsScalePercent = Const.backgroundScalePercent
+        kolodaView.backgroundCardsTopMargin = Const.kolodaTopMargin
         kolodaView.visibleCardsDirection = .top
     }
 
@@ -39,6 +40,8 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let questionView = QuestionKolodaView.loadFromNib()
         questionView.setup(for: viewModel.questions[index])
+        questionView.layer.masksToBounds = true
+        questionView.layer.cornerRadius = Const.questionViewCornerRadius
         return questionView
     }
 
@@ -48,13 +51,19 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
     }
 
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-
+        dismiss(animated: true, completion: nil)
     }
 
     func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
         guard let kolodaView = koloda.viewForCard(at: index) as? QuestionKolodaView else {
             return
         }
-
+        kolodaView.removeOverlayView()
     }
+}
+
+fileprivate extension Const {
+    static let questionViewCornerRadius: CGFloat = 20.0
+    static let kolodaTopMargin: CGFloat = 15.0
+    static let backgroundScalePercent: CGFloat = 0.8
 }

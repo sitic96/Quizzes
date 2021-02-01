@@ -280,14 +280,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-Fp-gpY">
-                                <rect key="frame" x="41.5" y="184" width="331" height="538"/>
+                                <rect key="frame" x="20.5" y="184" width="373" height="538"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-rr-n7G">
-                                        <rect key="frame" x="0.0" y="430.5" width="331" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="430.5" width="373" height="107.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCu-pf-nXJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="107.5"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-Zx-lm6" customClass="KolodaView" customModule="Koloda">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="405.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="405.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -298,7 +304,7 @@
                                     <constraint firstItem="wBY-rr-n7G" firstAttribute="height" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="0.2" id="M22-uF-wWe"/>
                                     <constraint firstItem="wBY-rr-n7G" firstAttribute="top" secondItem="hBQ-Zx-lm6" secondAttribute="bottom" constant="25" id="aNy-Or-9yg"/>
                                     <constraint firstItem="wBY-rr-n7G" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="ct3-xG-WsC"/>
-                                    <constraint firstAttribute="width" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="8:13" id="r1Q-4A-Rnn"/>
+                                    <constraint firstAttribute="width" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="9:13" id="r1Q-4A-Rnn"/>
                                     <constraint firstAttribute="trailing" secondItem="wBY-rr-n7G" secondAttribute="trailing" id="uK8-S1-BjO"/>
                                     <constraint firstItem="hBQ-Zx-lm6" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="vAz-m8-yOr"/>
                                     <constraint firstAttribute="bottom" secondItem="wBY-rr-n7G" secondAttribute="bottom" id="y34-ge-aSO"/>
@@ -309,7 +315,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerX" secondItem="lwb-rw-lf8" secondAttribute="centerX" id="SmK-3r-MmO"/>
-                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="width" secondItem="GRf-fi-PUz" secondAttribute="width" multiplier="0.8" id="oFV-y8-gk7"/>
+                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="width" secondItem="GRf-fi-PUz" secondAttribute="width" multiplier="0.9" id="oFV-y8-gk7"/>
                             <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerY" secondItem="lwb-rw-lf8" secondAttribute="centerY" id="s5X-hL-f6M"/>
                         </constraints>
                     </view>
@@ -327,6 +333,9 @@
         <image name="logo_ball" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

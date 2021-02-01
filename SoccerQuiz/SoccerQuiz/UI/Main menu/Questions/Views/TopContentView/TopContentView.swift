@@ -20,7 +20,7 @@ class TopContentView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
 
@@ -33,12 +33,15 @@ class TopContentView: UIView {
 
     private func setupConstraints(for view: UIView) {
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                      constant: Const.contentOffset).isActive = true
+        view.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                       constant: -Const.contentOffset).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
     func setup(for type: TopContentType) {
+        backgroundColor = .clear
         switch type {
         case .text(let style, let text):
             label.font = style.font
@@ -52,5 +55,8 @@ class TopContentView: UIView {
             imageView.kf.setImage(with: URL(string: imageURL))
         }
     }
+}
 
+fileprivate extension Const {
+    static let contentOffset: CGFloat = 20.0
 }
