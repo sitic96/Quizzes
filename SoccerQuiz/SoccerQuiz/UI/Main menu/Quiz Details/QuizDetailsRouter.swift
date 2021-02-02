@@ -8,7 +8,7 @@
 import UIKit
 
 protocol QuizDetailsRouterProtocol {
-    func gotToQuestions(_ questions: [Question])
+    func goToQuestions(of quiz: Quiz)
 }
 
 struct QuizDetailsRouter {
@@ -16,15 +16,15 @@ struct QuizDetailsRouter {
 }
 
 extension QuizDetailsRouter: QuizDetailsRouterProtocol {
-    func gotToQuestions(_ questions: [Question]) {
+    func goToQuestions(of quiz: Quiz) {
         guard let questionsVC = UIStoryboard(name: "Main",
                                              bundle: .main)
                 .instantiateViewController(withIdentifier: "QuestionsViewController") as? QuestionsViewController else {
             return
         }
         questionsVC.viewModel =
-            QuestionsViewModel(availableQuestions: questions)
+            QuestionsViewModel(quiz: quiz)
         questionsVC.modalPresentationStyle = .overFullScreen
-        controller?.present(questionsVC, animated: true, completion: nil)
+        controller?.navigationController?.pushViewController(questionsVC, animated: true)
     }
 }

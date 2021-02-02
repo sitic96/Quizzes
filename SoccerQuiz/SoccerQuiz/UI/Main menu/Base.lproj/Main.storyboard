@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-Fp-gpY">
-                                <rect key="frame" x="20.5" y="184" width="373" height="538"/>
+                                <rect key="frame" x="20.5" y="116" width="373" height="538"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-rr-n7G">
                                         <rect key="frame" x="0.0" y="430.5" width="373" height="107.5"/>
@@ -316,7 +316,7 @@
                         <constraints>
                             <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerX" secondItem="lwb-rw-lf8" secondAttribute="centerX" id="SmK-3r-MmO"/>
                             <constraint firstItem="3rk-Fp-gpY" firstAttribute="width" secondItem="GRf-fi-PUz" secondAttribute="width" multiplier="0.9" id="oFV-y8-gk7"/>
-                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerY" secondItem="lwb-rw-lf8" secondAttribute="centerY" id="s5X-hL-f6M"/>
+                            <constraint firstItem="3rk-Fp-gpY" firstAttribute="centerY" secondItem="lwb-rw-lf8" secondAttribute="centerY" multiplier="0.85" id="s5X-hL-f6M"/>
                         </constraints>
                     </view>
                     <connections>

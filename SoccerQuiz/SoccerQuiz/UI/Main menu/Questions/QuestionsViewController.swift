@@ -17,12 +17,21 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
+        title = viewModel.quizName
         
         kolodaView.delegate = self
         kolodaView.dataSource = self
         kolodaView.backgroundCardsScalePercent = Const.backgroundScalePercent
         kolodaView.backgroundCardsTopMargin = Const.kolodaTopMargin
         kolodaView.visibleCardsDirection = .top
+        kolodaView.alphaValueSemiTransparent = 0.4
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationTileStyle(NavigationTitleStyle(foregroundColor: StyleManager.General.Colors.black,
+                                                      font: StyleManager.General.Fonts.subtitleFont,
+                                                      tintColor: StyleManager.General.Colors.mainColor))
     }
 
     private func setupStyle() {
@@ -63,7 +72,7 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
 }
 
 fileprivate extension Const {
-    static let questionViewCornerRadius: CGFloat = 20.0
+    static let questionViewCornerRadius: CGFloat = 10.0
     static let kolodaTopMargin: CGFloat = 15.0
     static let backgroundScalePercent: CGFloat = 0.8
 }

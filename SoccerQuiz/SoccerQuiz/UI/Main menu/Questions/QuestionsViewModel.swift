@@ -8,19 +8,26 @@
 import Foundation
 
 protocol QuestionsViewModelProtocol {
+    var quizName: String { get }
     var questions: [Question] { get }
 }
 
 class QuestionsViewModel {
-    private let availableQuestions: [Question]
+    private let quiz: Quiz
 
-    init(availableQuestions: [Question]) {
-        self.availableQuestions = availableQuestions
+    init(quiz: Quiz) {
+        self.quiz = quiz
     }
 }
 
 extension QuestionsViewModel: QuestionsViewModelProtocol {
+    var quizName: String {
+        quiz.title
+    }
+
     var questions: [Question] {
-        availableQuestions
+        quiz.questions
+            .filter { $0.status != .finished }
+            .map { $0.question }
     }
 }

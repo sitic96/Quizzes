@@ -16,14 +16,27 @@ class QuizDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: " ", style: .plain,
+                            target: nil, action: nil)
+
         bindViewModel()
         setupStyle()
         setupContent()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setupNavigationTileStyle(NavigationTitleStyle(foregroundColor: StyleManager.General.Colors.mainColor,
+                                                      font: StyleManager.General.Fonts.subtitleFont,
+                                                      tintColor: StyleManager.General.Colors.mainColor))
+    }
+
     private func bindViewModel() {
-        viewModel.didSelectGoToQuestions = { [weak self] questions in
-            self?.router.gotToQuestions(questions)
+        viewModel.didSelectGoToQuestions = { [weak self] quiz in
+            self?.router.goToQuestions(of: quiz)
         }
     }
 

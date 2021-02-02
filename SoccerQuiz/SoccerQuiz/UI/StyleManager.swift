@@ -15,6 +15,7 @@ struct StyleManager {
             static let gradientStartColor = #colorLiteral(red: 0.8901960784, green: 0.462745098, blue: 0.3411764706, alpha: 1)
             static let gradientFinishColor = #colorLiteral(red: 0.8588235294, green: 0.4, blue: 0.3411764706, alpha: 1)
             static let white = UIColor.white
+            static let black = UIColor.black
 
             struct Text {
                 static let placeholderColor = #colorLiteral(red: 0.8352941176, green: 0.8470588235, blue: 0.8823529412, alpha: 1)
@@ -59,6 +60,6 @@ struct StyleManager {
     }
 
     struct QuestionsScreen {
-        static let backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7)
+        static let backgroundColor = StyleManager.backgroundColor
     }
 }
