@@ -38,6 +38,8 @@ class BottomContentView: UIView {
         return mainStackView
     }()
 
+    var delegate: QuestionSelectedAnswerDelegate?
+
     private func setupConstraints(for view: UIView) {
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.leadingAnchor.constraint(equalTo: leadingAnchor,
@@ -46,6 +48,10 @@ class BottomContentView: UIView {
                                      constant: -Const.contentOffset).isActive = true
         view.trailingAnchor.constraint(equalTo: trailingAnchor,
                                        constant: -Const.contentOffset).isActive = true
+    }
+
+    @objc func tapFunction(sender: UITapGestureRecognizer) {
+        delegate?.didSelectAnswer(at: sender.view?.tag)
     }
 
     func setup(type: BottomContentType, options: [Option]) {
@@ -63,6 +69,10 @@ class BottomContentView: UIView {
                 label.backgroundColor = StyleManager.General.Colors.white
                 label.clipsToBounds = true
                 label.layer.cornerRadius = Const.labelCornerRadius
+                label.isUserInteractionEnabled = true
+                label.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                  action: #selector(tapFunction)))
+                label.tag = i
                 if i < 2 {
                     (stackView.arrangedSubviews
                         .first(where: { $0.tag == 0 }) as? UIStackView)?.addArrangedSubview(label)

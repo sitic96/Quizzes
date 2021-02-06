@@ -12,7 +12,7 @@ protocol QuizDetailsViewModelProtocol {
     var quizDescription: String { get }
     var questions: [QuizQuestion] { get }
 
-    var didSelectGoToQuestions: ((Quiz) -> Void)? { get set }
+    var didSelectGoToQuestions: ((Quiz, Int) -> Void)? { get set }
 
     func didSelectQuestion(at index: Int)
 }
@@ -20,7 +20,7 @@ protocol QuizDetailsViewModelProtocol {
 class QuizDetailsViewModel {
     private let quiz: Quiz
 
-    var didSelectGoToQuestions: ((Quiz) -> Void)?
+    var didSelectGoToQuestions: ((Quiz, Int) -> Void)?
 
     init(quiz: Quiz) {
         self.quiz = quiz
@@ -41,6 +41,6 @@ extension QuizDetailsViewModel: QuizDetailsViewModelProtocol {
     }
     
     func didSelectQuestion(at index: Int) {
-        didSelectGoToQuestions?(quiz)
+        didSelectGoToQuestions?(quiz, index)
     }
 }

@@ -35,8 +35,9 @@ class QuizDetailsViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        viewModel.didSelectGoToQuestions = { [weak self] quiz in
-            self?.router.goToQuestions(of: quiz)
+        viewModel.didSelectGoToQuestions = { [weak self] (quiz, selectedQuestionIndex) in
+            self?.router.goToQuestions(of: quiz,
+                                       selectedQuestionIndex: selectedQuestionIndex)
         }
     }
 

@@ -12,6 +12,8 @@ class QuestionKolodaView: UIView {
     @IBOutlet private weak var topContentView: TopContentView!
     @IBOutlet private weak var bottomContentView: BottomContentView!
 
+    var delegate: QuestionSelectedAnswerDelegate?
+
     private func setupGradient() {
         let colorTop =  StyleManager.General.Colors.gradientStartColor.cgColor
         let colorBottom = StyleManager.General.Colors.gradientFinishColor.cgColor
@@ -46,6 +48,7 @@ class QuestionKolodaView: UIView {
             let style = BottomContentTextStyle(font: StyleManager.General.Fonts.semibolMainFont,
                                                textColor: StyleManager.General.Colors.mainColor)
             bottomContentView.setup(type: .options(style: style), options: options)
+            bottomContentView.delegate = delegate
         }
     }
 

@@ -11,13 +11,29 @@ protocol QuestionsViewModelProtocol {
     var quizName: String { get }
     var questions: [Question] { get }
     var questionsWithStatus: [QuizQuestion] { get }
+    var currentQuestionIndex: Int { get }
+
+    var didSelectAnswer: (() -> Void)? { get set }
+    var didChangeSelectedQuestion: ((_ changedQuestionsIndexes: [Int]) -> Void )? { get set }
+
+    func didSelectAnswer(at index: Int)
+    func didSwipe(from index: Int)
 }
 
 class QuestionsViewModel {
     private let quiz: Quiz
+    private var selectedQuestionIndex: Int {
+        didSet {
+            didChangeSelectedQuestion?([oldValue, selectedQuestionIndex])
+        }
+    }
 
-    init(quiz: Quiz) {
+    var didSelectAnswer: (() -> Void)?
+    var didChangeSelectedQuestion: ((_ changedQuestionsIndexes: [Int]) -> Void )?
+
+    init(quiz: Quiz, selectedQuestionIndex: Int) {
         self.quiz = quiz
+        self.selectedQuestionIndex = selectedQuestionIndex
     }
 }
 
@@ -27,10 +43,23 @@ extension QuestionsViewModel: QuestionsViewModelProtocol {
     }
 
     var questions: [Question] {
-        quiz.questions.map { $0.question }
+        quiz.questions.map { $0.question }
     }
 
     var questionsWithStatus: [QuizQuestion] {
         quiz.questions
+    }
+
+    var currentQuestionIndex: Int {
+        selectedQuestionIndex
+    }
+
+    func didSelectAnswer(at index: Int) {
+        didSelectAnswer?()
+        selectedQuestionIndex = selectedQuestionIndex + 1
+    }
+
+    func didSwipe(from index: Int) {
+        selectedQuestionIndex = index + 1
     }
 }

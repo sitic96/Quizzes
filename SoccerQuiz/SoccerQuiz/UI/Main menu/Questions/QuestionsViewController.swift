@@ -9,16 +9,22 @@ import UIKit
 import Localize_Swift
 import Koloda
 
+protocol QuestionSelectedAnswerDelegate: AnyObject {
+    func didSelectAnswer(at index: Int?)
+}
+
 class QuestionsViewController: UIViewController {
     @IBOutlet private weak var kolodaView: KolodaView!
     @IBOutlet private weak var questionsDotsStackView: UIStackView!
     @IBOutlet private weak var needHelpButton: UIButton!
     @IBOutlet private var dotsStackViewWidthConstraint: NSLayoutConstraint!
 
+    var router: QuestionsRouterProtocol!
     var viewModel: QuestionsViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
         setupStyle()
         setupContent()
         setupDotsView()
@@ -39,6 +45,30 @@ class QuestionsViewController: UIViewController {
                                                       tintColor: StyleManager.General.Colors.mainColor))
     }
 
+    private func bindViewModel() {
+        viewModel.didSelectAnswer = { [weak self] in
+
+            // KolodaView skip swipping if isAnimationg is true
+            // We must wait until animation is finished
+
+            var didSwipe = false
+            DispatchQueue.global(qos: .userInteractive).async {
+                while !(self?.kolodaView.isAnimating ?? true) && !didSwipe {
+                    didSwipe = true
+                    DispatchQueue.main.async {
+                        self?.kolodaView.swipe(.left, force: true)
+                    }
+                }
+            }
+        }
+
+        viewModel.didChangeSelectedQuestion = { [weak self] updatedIndexes in
+            DispatchQueue.main.async {
+                self?.updateDotsView(updatedIndexes)
+            }
+        }
+    }
+
     private func setupStyle() {
         view.backgroundColor = StyleManager.QuestionsScreen.backgroundColor
         needHelpButton.backgroundColor = StyleManager.QuestionsScreen.helpButtonBackgroundColor
@@ -57,20 +87,8 @@ class QuestionsViewController: UIViewController {
     private func setupDotsView() {
         for i in 0..<viewModel.questionsWithStatus.count {
             let dotView = ColorRoundView()
-            switch viewModel.questionsWithStatus[i].status {
-            case .finished:
-                dotView.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
-                                                        borderWidth: 1.0,
-                                                        fillColor: StyleManager.QuestionsScreen.finishedQuestionColor))
-            case .notStarted:
-                dotView.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
-                                                        borderWidth: 1.0,
-                                                        fillColor: StyleManager.General.Colors.grey))
-            case .started:
-                dotView.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
-                                                        borderWidth: 1.0,
-                                                        fillColor: StyleManager.QuestionsScreen.startedQuestionColor))
-            }
+            setupDotView(dotView, for: viewModel.questionsWithStatus[i].status,
+                         isCurrent: i == viewModel.currentQuestionIndex)
             dotView.tag = i
             dotView.translatesAutoresizingMaskIntoConstraints = false
             questionsDotsStackView.addArrangedSubview(dotView)
@@ -80,6 +98,41 @@ class QuestionsViewController: UIViewController {
         dotsStackViewWidthConstraint.constant = CGFloat(viewModel.questions.count) *
             questionsDotsStackView.frame.height +
             ((CGFloat(viewModel.questions.count) - 1) * Const.dotStackViewSpacing)
+    }
+
+    private func updateDotsView(_ updatedIndexes: [Int]) {
+        updatedIndexes.forEach { index in
+            guard let updatedDotView = questionsDotsStackView.arrangedSubviews
+                    .first(where: { $0.tag == index }) as? ColorRoundView,
+                  index < viewModel.questionsWithStatus.count else {
+                return
+            }
+            setupDotView(updatedDotView, for: viewModel.questionsWithStatus[index].status,
+                         isCurrent: index == viewModel.currentQuestionIndex)
+        }
+    }
+
+    private func setupDotView(_ view: ColorRoundView, for status: QuizQuestionStatus, isCurrent: Bool) {
+        if isCurrent {
+            view.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
+                                                 borderWidth: 1.0,
+                                                 fillColor: StyleManager.General.Colors.grey))
+        } else {
+            switch status {
+            case .finished:
+                view.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
+                                                     borderWidth: 1.0,
+                                                     fillColor: StyleManager.QuestionsScreen.finishedQuestionColor))
+            case .notStarted:
+                view.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
+                                                     borderWidth: 1.0,
+                                                     fillColor: StyleManager.General.Colors.white))
+            case .started:
+                view.setUp(with: ColorRoundViewStyle(borderColor: StyleManager.General.Colors.grey,
+                                                     borderWidth: 1.0,
+                                                     fillColor: StyleManager.QuestionsScreen.startedQuestionColor))
+            }
+        }
     }
 }
 
@@ -92,6 +145,7 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let questionView = QuestionKolodaView.loadFromNib()
+        questionView.delegate = self
         questionView.setup(for: viewModel.questions[index])
         questionView.layer.masksToBounds = true
         questionView.layer.cornerRadius = Const.questionViewCornerRadius
@@ -100,11 +154,11 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
 
     func koloda(_ koloda: KolodaView,
                 allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] {
-        []
+        [SwipeResultDirection.left, SwipeResultDirection.right]
     }
 
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        dismiss(animated: true, completion: nil)
+        router.close()
     }
 
     func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
@@ -112,6 +166,21 @@ extension QuestionsViewController: KolodaViewDelegate, KolodaViewDataSource {
             return
         }
         kolodaView.removeOverlayView()
+    }
+
+    func koloda(_ koloda: KolodaView,
+                didSwipeCardAt index: Int,
+                in direction: SwipeResultDirection) {
+        viewModel.didSwipe(from: index)
+    }
+}
+
+// MARK: QuestionSelectedAnswerDelegate
+
+extension QuestionsViewController: QuestionSelectedAnswerDelegate {
+    func didSelectAnswer(at index: Int?) {
+        guard let index = index else { return }
+        viewModel.didSelectAnswer(at: index)
     }
 }
 

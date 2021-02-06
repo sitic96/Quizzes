@@ -59,6 +59,7 @@
 		72B9DCEC25C3316A00A4032C /* QuestionKolodaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B9DCEB25C3316A00A4032C /* QuestionKolodaView.xib */; };
 		72B9DCF025C3323B00A4032C /* UIView+nibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B9DCEF25C3323B00A4032C /* UIView+nibLoadable.swift */; };
 		72B9DCFA25C3330A00A4032C /* TopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B9DCF925C3330A00A4032C /* TopContentView.swift */; };
+		72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA85F125CF23D900994CEE /* QuestionsRouter.swift */; };
 		72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */; };
 		72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
@@ -133,6 +134,7 @@
 		72B9DCEB25C3316A00A4032C /* QuestionKolodaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionKolodaView.xib; sourceTree = "<group>"; };
 		72B9DCEF25C3323B00A4032C /* UIView+nibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+nibLoadable.swift"; sourceTree = "<group>"; };
 		72B9DCF925C3330A00A4032C /* TopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopContentView.swift; sourceTree = "<group>"; };
+		72BA85F125CF23D900994CEE /* QuestionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRouter.swift; sourceTree = "<group>"; };
 		72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+navigationTitleColor.swift"; sourceTree = "<group>"; };
 		72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoundButton.swift; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				72B9DCE725C3311500A4032C /* Views */,
 				72B9DCE025C32FF600A4032C /* QuestionsViewController.swift */,
 				72B9DCE325C3307600A4032C /* QuestionsViewModel.swift */,
+				72BA85F125CF23D900994CEE /* QuestionsRouter.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
 				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,
+				72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
 				72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */,
 				72B9DCE925C3313E00A4032C /* QuestionKolodaView.swift in Sources */,
