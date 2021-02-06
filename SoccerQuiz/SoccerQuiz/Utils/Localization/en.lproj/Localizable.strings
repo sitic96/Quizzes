@@ -19,3 +19,7 @@
 // MARK: Quizes
 
 "selectThemeTitle" = "Select theme:";
+
+// MARK: Questions
+
+"needHelpButtonTitle" = "Need help?";

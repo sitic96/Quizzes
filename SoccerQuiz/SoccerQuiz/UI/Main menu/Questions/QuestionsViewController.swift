@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Localize_Swift
 import Koloda
 
 class QuestionsViewController: UIViewController {
     @IBOutlet private weak var kolodaView: KolodaView!
     @IBOutlet private weak var questionsDotsStackView: UIStackView!
+    @IBOutlet private weak var needHelpButton: UIButton!
     @IBOutlet private var dotsStackViewWidthConstraint: NSLayoutConstraint!
 
     var viewModel: QuestionsViewModelProtocol!
@@ -18,6 +20,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
+        setupContent()
         setupDotsView()
         title = viewModel.quizName
         
@@ -38,6 +41,17 @@ class QuestionsViewController: UIViewController {
 
     private func setupStyle() {
         view.backgroundColor = StyleManager.QuestionsScreen.backgroundColor
+        needHelpButton.backgroundColor = StyleManager.QuestionsScreen.helpButtonBackgroundColor
+        needHelpButton.titleLabel?.font = StyleManager.General.Fonts.subtitleFont
+        needHelpButton.setTitleColor(StyleManager.General.Colors.white,
+                                     for: .normal)
+        needHelpButton.layer.cornerRadius = Const.needHelpButtonCornerRadius
+    }
+
+    private func setupContent() {
+        needHelpButton
+            .setTitle(LocalizeKeys.Main.Questions.needHelpButtonTitle.localized(),
+                      for: .normal)
     }
 
     private func setupDotsView() {
@@ -106,4 +120,5 @@ fileprivate extension Const {
     static let kolodaTopMargin: CGFloat = 15.0
     static let backgroundScalePercent: CGFloat = 0.8
     static let dotStackViewSpacing: CGFloat = 17.0
+    static let needHelpButtonCornerRadius: CGFloat = 5.0
 }

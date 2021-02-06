@@ -64,5 +64,6 @@ struct StyleManager {
         static let backgroundColor = StyleManager.backgroundColor
         static let finishedQuestionColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         static let startedQuestionColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        static let helpButtonBackgroundColor = #colorLiteral(red: 0.962623775, green: 0.6664947867, blue: 0.1145366505, alpha: 1)
     }
 }
