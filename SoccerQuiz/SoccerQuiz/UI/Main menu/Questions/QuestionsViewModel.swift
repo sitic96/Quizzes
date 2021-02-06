@@ -10,6 +10,7 @@ import Foundation
 protocol QuestionsViewModelProtocol {
     var quizName: String { get }
     var questions: [Question] { get }
+    var questionsWithStatus: [QuizQuestion] { get }
 }
 
 class QuestionsViewModel {
@@ -26,8 +27,10 @@ extension QuestionsViewModel: QuestionsViewModelProtocol {
     }
 
     var questions: [Question] {
+        quiz.questions.map { $0.question }
+    }
+
+    var questionsWithStatus: [QuizQuestion] {
         quiz.questions
-            .filter { $0.status != .finished }
-            .map { $0.question }
     }
 }

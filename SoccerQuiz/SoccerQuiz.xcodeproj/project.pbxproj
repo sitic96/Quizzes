@@ -60,6 +60,7 @@
 		72B9DCF025C3323B00A4032C /* UIView+nibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B9DCEF25C3323B00A4032C /* UIView+nibLoadable.swift */; };
 		72B9DCFA25C3330A00A4032C /* TopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B9DCF925C3330A00A4032C /* TopContentView.swift */; };
 		72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */; };
+		72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
 		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
 		72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB025B61EE600B401BC /* CachingManager.swift */; };
@@ -133,6 +134,7 @@
 		72B9DCEF25C3323B00A4032C /* UIView+nibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+nibLoadable.swift"; sourceTree = "<group>"; };
 		72B9DCF925C3330A00A4032C /* TopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopContentView.swift; sourceTree = "<group>"; };
 		72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+navigationTitleColor.swift"; sourceTree = "<group>"; };
+		72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoundButton.swift; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
 		72F24DB025B61EE600B401BC /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 				72503E0725BF62AB000F9814 /* QuestionCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7250EEA425CF1A6600F56C94 /* ColorRoundView */ = {
+			isa = PBXGroup;
+			children = (
+				72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */,
+			);
+			path = ColorRoundView;
 			sourceTree = "<group>";
 		};
 		72731AA025B47F4300F21370 = {
@@ -385,6 +395,7 @@
 		72B9DCE725C3311500A4032C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7250EEA425CF1A6600F56C94 /* ColorRoundView */,
 				7280A29125C336C0007554A8 /* BottomContentView */,
 				72B9DCF525C332DC00A4032C /* TopContentView */,
 				72B9DCF325C332B900A4032C /* QuestionKolodaView */,
@@ -621,6 +632,7 @@
 				72503E0825BF62AB000F9814 /* QuestionCollectionViewCell.swift in Sources */,
 				72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */,
 				72503E0425BF6044000F9814 /* QuizDetailsViewController.swift in Sources */,
+				72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */,
 				72F24E0225B62A6A00B401BC /* Content.swift in Sources */,
 				72B0C26925BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift in Sources */,
 				72B9DCE425C3307600A4032C /* QuestionsViewModel.swift in Sources */,

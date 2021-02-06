@@ -282,16 +282,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-Fp-gpY">
                                 <rect key="frame" x="20.5" y="116" width="373" height="538"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBY-rr-n7G">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-jy-rqN" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="430.5" width="373" height="107.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCu-pf-nXJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="107.5"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-B3-iYi">
+                                                <rect key="frame" x="161.5" y="0.0" width="50" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="NZJ-EN-CEd"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="kEv-B3-iYi" firstAttribute="centerX" secondItem="RCz-jy-rqN" secondAttribute="centerX" id="Guy-bn-RP6"/>
+                                            <constraint firstItem="kEv-B3-iYi" firstAttribute="height" secondItem="RCz-jy-rqN" secondAttribute="height" multiplier="0.13" id="Qcg-uf-htO"/>
+                                            <constraint firstItem="kEv-B3-iYi" firstAttribute="top" secondItem="RCz-jy-rqN" secondAttribute="top" id="QfZ-CM-36m"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-Zx-lm6" customClass="KolodaView" customModule="Koloda">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="405.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,15 +306,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="RCz-jy-rqN" firstAttribute="height" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="0.2" id="3vY-xx-GYi"/>
                                     <constraint firstAttribute="trailing" secondItem="hBQ-Zx-lm6" secondAttribute="trailing" id="Ef2-BR-uL9"/>
                                     <constraint firstItem="hBQ-Zx-lm6" firstAttribute="top" secondItem="3rk-Fp-gpY" secondAttribute="top" id="Jcj-Bf-xhe"/>
-                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="height" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="0.2" id="M22-uF-wWe"/>
-                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="top" secondItem="hBQ-Zx-lm6" secondAttribute="bottom" constant="25" id="aNy-Or-9yg"/>
-                                    <constraint firstItem="wBY-rr-n7G" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="ct3-xG-WsC"/>
+                                    <constraint firstAttribute="bottom" secondItem="RCz-jy-rqN" secondAttribute="bottom" id="g9Q-9U-Tel"/>
+                                    <constraint firstAttribute="trailing" secondItem="RCz-jy-rqN" secondAttribute="trailing" id="kRk-NX-BX2"/>
+                                    <constraint firstItem="RCz-jy-rqN" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="kh6-d7-pYg"/>
                                     <constraint firstAttribute="width" secondItem="3rk-Fp-gpY" secondAttribute="height" multiplier="9:13" id="r1Q-4A-Rnn"/>
-                                    <constraint firstAttribute="trailing" secondItem="wBY-rr-n7G" secondAttribute="trailing" id="uK8-S1-BjO"/>
                                     <constraint firstItem="hBQ-Zx-lm6" firstAttribute="leading" secondItem="3rk-Fp-gpY" secondAttribute="leading" id="vAz-m8-yOr"/>
-                                    <constraint firstAttribute="bottom" secondItem="wBY-rr-n7G" secondAttribute="bottom" id="y34-ge-aSO"/>
+                                    <constraint firstItem="RCz-jy-rqN" firstAttribute="top" secondItem="hBQ-Zx-lm6" secondAttribute="bottom" constant="25" id="xca-3r-gJF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -320,8 +327,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dotsStackViewWidthConstraint" destination="NZJ-EN-CEd" id="xVS-yD-YOa"/>
                         <outlet property="kolodaView" destination="hBQ-Zx-lm6" id="Z9b-Qz-n9L"/>
-                        <outlet property="optionsStackView" destination="wBY-rr-n7G" id="a9t-Kp-p3O"/>
+                        <outlet property="questionsDotsStackView" destination="kEv-B3-iYi" id="m1w-1z-8de"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6j-fH-O9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,9 +341,6 @@
         <image name="logo_ball" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
