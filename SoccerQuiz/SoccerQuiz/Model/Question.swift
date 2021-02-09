@@ -19,7 +19,7 @@ enum QuestionBottomContent {
 
 struct Question {
     let id: Int
-    let answer: [Option]
+    let answer: Option
     let topContent: QuestionTopContent
     let bottomContent: QuestionBottomContent
 }

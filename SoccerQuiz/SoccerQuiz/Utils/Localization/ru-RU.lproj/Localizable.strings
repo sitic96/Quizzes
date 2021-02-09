@@ -18,3 +18,7 @@
 
 // MARK: Quizes
 "selectThemeTitle" = "Выбери тему:";
+
+// MARK: Questions
+
+"needHelpButtonTitle" = "Нужна помощь?";

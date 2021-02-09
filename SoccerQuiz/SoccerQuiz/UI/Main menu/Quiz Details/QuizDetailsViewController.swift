@@ -12,11 +12,33 @@ class QuizDetailsViewController: UIViewController {
     @IBOutlet private weak var questionsCollectionView: UICollectionView!
 
     var viewModel: QuizDetailsViewModelProtocol!
+    var router: QuizDetailsRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: " ", style: .plain,
+                            target: nil, action: nil)
+
+        bindViewModel()
         setupStyle()
         setupContent()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setupNavigationTileStyle(NavigationTitleStyle(foregroundColor: StyleManager.General.Colors.mainColor,
+                                                      font: StyleManager.General.Fonts.subtitleFont,
+                                                      tintColor: StyleManager.General.Colors.mainColor))
+    }
+
+    private func bindViewModel() {
+        viewModel.didSelectGoToQuestions = { [weak self] (quiz, selectedQuestionIndex) in
+            self?.router.goToQuestions(of: quiz,
+                                       selectedQuestionIndex: selectedQuestionIndex)
+        }
     }
 
     private func setupStyle() {
@@ -76,6 +98,11 @@ extension QuizDetailsViewController: UICollectionViewDelegate, UICollectionViewD
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Const.questionsCellOffset
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectQuestion(at: indexPath.item)
     }
 }
 

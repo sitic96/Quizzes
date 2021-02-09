@@ -14,6 +14,9 @@ struct StyleManager {
             static let mainColor = #colorLiteral(red: 0.9058823529, green: 0.3921568627, blue: 0.3176470588, alpha: 1)
             static let gradientStartColor = #colorLiteral(red: 0.8901960784, green: 0.462745098, blue: 0.3411764706, alpha: 1)
             static let gradientFinishColor = #colorLiteral(red: 0.8588235294, green: 0.4, blue: 0.3411764706, alpha: 1)
+            static let white = UIColor.white
+            static let black = UIColor.black
+            static let grey = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
 
             struct Text {
                 static let placeholderColor = #colorLiteral(red: 0.8352941176, green: 0.8470588235, blue: 0.8823529412, alpha: 1)
@@ -28,12 +31,14 @@ struct StyleManager {
                                           size: 28.0)!
             static let subtitleFont = UIFont(name: "MontserratAlternates-SemiBold",
                                           size: 20.0)!
-            static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
-                                                size: 12.0)!
             static let mainFont = UIFont(name: "MontserratAlternates-Light",
                                          size: 18.0)!
+            static let semibolMainFont = UIFont(name: "MontserratAlternates-SemiBold",
+                                                size: 18.0)!
             static let subHeaderFont = UIFont(name: "MontserratAlternates-Light",
                                               size: 16.0)!
+            static let placeholderFont = UIFont(name: "MontserratAlternates-Thin",
+                                                size: 12.0)!
         }
     }
 
@@ -53,5 +58,12 @@ struct StyleManager {
 
     struct WelcomeScreen {
         static let logoImageWithText = #imageLiteral(resourceName: "logo")
+    }
+
+    struct QuestionsScreen {
+        static let backgroundColor = StyleManager.backgroundColor
+        static let finishedQuestionColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        static let startedQuestionColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        static let helpButtonBackgroundColor = #colorLiteral(red: 0.962623775, green: 0.6664947867, blue: 0.1145366505, alpha: 1)
     }
 }

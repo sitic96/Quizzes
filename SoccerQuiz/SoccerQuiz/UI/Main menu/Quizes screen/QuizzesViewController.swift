@@ -23,12 +23,16 @@ class QuizzesViewController: UIViewController {
         super.viewDidLoad()
         setupStyle()
         setupView()
-        navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: StyleManager.General.Colors.mainColor,
-             NSAttributedString.Key.font: StyleManager.General.Fonts.subtitleFont]
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationItem.backBarButtonItem =
-            UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = StyleManager.General.Colors.mainColor
+            UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setupNavigationTileStyle(
+            NavigationTitleStyle(foregroundColor: StyleManager.General.Colors.mainColor,
+                                 font: StyleManager.General.Fonts.subtitleFont,
+                                 tintColor: StyleManager.General.Colors.mainColor))
     }
 
     private func setupStyle() {

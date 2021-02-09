@@ -22,5 +22,9 @@ struct LocalizeKeys {
         struct Quizes {
             static let selectThemeTitle = "selectThemeTitle"
         }
+
+        struct Questions {
+            static let needHelpButtonTitle = "needHelpButtonTitle"
+        }
     }
 }

@@ -23,6 +23,7 @@ extension QuizzesRouter: QuizzesRouterProtocol {
             return
         }
         quizDetailcVC.viewModel = QuizDetailsViewModel(quiz: quiz)
+        quizDetailcVC.router = QuizDetailsRouter(controller: quizDetailcVC)
         controller?.navigationController?.pushViewController(quizDetailcVC, animated: true)
     }
 }
