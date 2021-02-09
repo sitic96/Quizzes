@@ -23,3 +23,8 @@
 // MARK: Questions
 
 "needHelpButtonTitle" = "Need help?";
+
+// MARK: Get Help
+
+"askFriendsTitle" = "Ask friends";
+"otherOptionsTitle" = "Or";

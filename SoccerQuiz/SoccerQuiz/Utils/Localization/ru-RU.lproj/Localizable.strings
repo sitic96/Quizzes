@@ -22,3 +22,8 @@
 // MARK: Questions
 
 "needHelpButtonTitle" = "Нужна помощь?";
+
+// MARK: Get Help
+
+"askFriendsTitle" = "Попроси помощи у друзей";
+"otherOptionsTitle" = "Или";

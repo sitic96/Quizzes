@@ -62,6 +62,8 @@
 		72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA85F125CF23D900994CEE /* QuestionsRouter.swift */; };
 		72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */; };
 		72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */; };
+		72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */; };
+		72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
 		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
 		72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB025B61EE600B401BC /* CachingManager.swift */; };
@@ -137,6 +139,8 @@
 		72BA85F125CF23D900994CEE /* QuestionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRouter.swift; sourceTree = "<group>"; };
 		72D33F2125C9D64E0018A514 /* UIViewController+navigationTitleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+navigationTitleColor.swift"; sourceTree = "<group>"; };
 		72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoundButton.swift; sourceTree = "<group>"; };
+		72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewController.swift; sourceTree = "<group>"; };
+		72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpRouter.swift; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
 		72F24DB025B61EE600B401BC /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 		72731ACC25B4815200F21370 /* Main menu */ = {
 			isa = PBXGroup;
 			children = (
+				72D494F725D2A0BE0012E51D /* Get Help */,
 				72B9DCDF25C32FDB00A4032C /* Questions */,
 				72503E0225BF6024000F9814 /* Quiz Details */,
 				7208C48425B74B2F0089EC82 /* Quizes screen */,
@@ -421,6 +426,15 @@
 				72B9DCF925C3330A00A4032C /* TopContentView.swift */,
 			);
 			path = TopContentView;
+			sourceTree = "<group>";
+		};
+		72D494F725D2A0BE0012E51D /* Get Help */ = {
+			isa = PBXGroup;
+			children = (
+				72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */,
+				72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */,
+			);
+			path = "Get Help";
 			sourceTree = "<group>";
 		};
 		72F24DAF25B61ED300B401BC /* Managers */ = {
@@ -627,6 +641,7 @@
 				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,
 				72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */,
+				72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
 				72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */,
 				72B9DCE925C3313E00A4032C /* QuestionKolodaView.swift in Sources */,
@@ -641,6 +656,7 @@
 				72B0C26925BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift in Sources */,
 				72B9DCE425C3307600A4032C /* QuestionsViewModel.swift in Sources */,
 				72503E0C25BF6364000F9814 /* QuizDetailsViewModel.swift in Sources */,
+				72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */,
 				72F24DF925B6255700B401BC /* CoreQuestion.swift in Sources */,
 				72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */,
 				722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */,
