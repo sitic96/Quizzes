@@ -21,6 +21,18 @@ class GetHelpViewController: UIViewController {
         super.viewDidLoad()
         setupStyle()
         setupContent()
+        let storiesSharingView = SocialSharingOptionView()
+        storiesSharingView.setUp(style: SocialSharingOptionStyle(titleFont: StyleManager.General.Fonts.subHeaderFont,
+                                                   titleColor: StyleManager.General.Colors.Text.mainColor),
+                   title: LocalizeKeys.Main.GetHelp.storiesTitle,
+                   image: #imageLiteral(resourceName: "pointsImage"))
+        let whatsappSharingView = SocialSharingOptionView()
+        whatsappSharingView.setUp(style: SocialSharingOptionStyle(titleFont: StyleManager.General.Fonts.subHeaderFont,
+                                                   titleColor: StyleManager.General.Colors.Text.mainColor),
+                   title: LocalizeKeys.Main.GetHelp.whatsappTitle,
+                   image: #imageLiteral(resourceName: "logo_ball"))
+        socialSharingOptionsStackView.addArrangedSubview(storiesSharingView)
+        socialSharingOptionsStackView.addArrangedSubview(whatsappSharingView)
     }
     
     private func setupStyle() {

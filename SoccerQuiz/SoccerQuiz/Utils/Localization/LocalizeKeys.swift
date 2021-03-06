@@ -30,6 +30,8 @@ struct LocalizeKeys {
         struct GetHelp {
             static let askFriendsTitle = "askFriendsTitle"
             static let otherOptionsTitle = "otherOptionsTitle"
+            static let storiesTitle = "storiesTtile"
+            static let whatsappTitle = "whatsappTitle"
         }
     }
 }
