@@ -64,7 +64,8 @@
 		72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */; };
 		72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */; };
 		72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */; };
-		72D4950825D2AC880012E51D /* SocialSharingOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950725D2AC880012E51D /* SocialSharingOptionView.swift */; };
+		72D4950825D2AC880012E51D /* SocialSharingOptionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */; };
+		72EAA89A25F429D10009E295 /* GetHelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EAA89925F429D10009E295 /* GetHelpViewModel.swift */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
 		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
 		72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB025B61EE600B401BC /* CachingManager.swift */; };
@@ -142,7 +143,8 @@
 		72D33F2525C9EB5B0018A514 /* ColorRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoundButton.swift; sourceTree = "<group>"; };
 		72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewController.swift; sourceTree = "<group>"; };
 		72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpRouter.swift; sourceTree = "<group>"; };
-		72D4950725D2AC880012E51D /* SocialSharingOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSharingOptionView.swift; sourceTree = "<group>"; };
+		72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSharingOptionControl.swift; sourceTree = "<group>"; };
+		72EAA89925F429D10009E295 /* GetHelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewModel.swift; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
 		72F24DB025B61EE600B401BC /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			children = (
 				72D4950625D2AC630012E51D /* Views */,
 				72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */,
+				72EAA89925F429D10009E295 /* GetHelpViewModel.swift */,
 				72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */,
 			);
 			path = "Get Help";
@@ -443,7 +446,7 @@
 		72D4950625D2AC630012E51D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				72D4950725D2AC880012E51D /* SocialSharingOptionView.swift */,
+				72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -665,7 +668,7 @@
 				72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */,
 				72F24E0225B62A6A00B401BC /* Content.swift in Sources */,
 				72B0C26925BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift in Sources */,
-				72D4950825D2AC880012E51D /* SocialSharingOptionView.swift in Sources */,
+				72D4950825D2AC880012E51D /* SocialSharingOptionControl.swift in Sources */,
 				72B9DCE425C3307600A4032C /* QuestionsViewModel.swift in Sources */,
 				72503E0C25BF6364000F9814 /* QuizDetailsViewModel.swift in Sources */,
 				72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */,
@@ -687,6 +690,7 @@
 				72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */,
 				72F24DF625B624CE00B401BC /* Quiz.swift in Sources */,
 				7203D14725B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */,
+				72EAA89A25F429D10009E295 /* GetHelpViewModel.swift in Sources */,
 				722BED5A25B4A49D008023B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

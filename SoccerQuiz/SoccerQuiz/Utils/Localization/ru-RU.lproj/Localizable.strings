@@ -26,6 +26,7 @@
 // MARK: Get Help
 
 "askFriendsTitle" = "Попроси помощи у друзей";
-"otherOptionsTitle" = "Или";
+"orTitle" = "Или";
+"otherOptionsTitle" = "Другие опции";
 "storiesTtile" = "Stories";
 "whatsappTitle" = "Whatsapp";

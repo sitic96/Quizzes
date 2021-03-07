@@ -14,25 +14,34 @@ class GetHelpViewController: UIViewController {
     @IBOutlet private weak var otherOptionsLabel: UILabel!
     @IBOutlet private weak var pointsView: UIView!
     @IBOutlet private weak var popupView: UIView!
-    
+
+    var viewModel: GetHelpViewModelProtocol!
     var router: GetHelpRouterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
         setupContent()
-        let storiesSharingView = SocialSharingOptionView()
-        storiesSharingView.setUp(style: SocialSharingOptionStyle(titleFont: StyleManager.General.Fonts.subHeaderFont,
-                                                   titleColor: StyleManager.General.Colors.Text.mainColor),
-                   title: LocalizeKeys.Main.GetHelp.storiesTitle,
-                   image: #imageLiteral(resourceName: "pointsImage"))
-        let whatsappSharingView = SocialSharingOptionView()
-        whatsappSharingView.setUp(style: SocialSharingOptionStyle(titleFont: StyleManager.General.Fonts.subHeaderFont,
-                                                   titleColor: StyleManager.General.Colors.Text.mainColor),
-                   title: LocalizeKeys.Main.GetHelp.whatsappTitle,
-                   image: #imageLiteral(resourceName: "logo_ball"))
-        socialSharingOptionsStackView.addArrangedSubview(storiesSharingView)
-        socialSharingOptionsStackView.addArrangedSubview(whatsappSharingView)
+
+        viewModel.availableChanels.forEach {
+            var chanelName = ""
+            switch $0 {
+            case .stories:
+                chanelName = LocalizeKeys.Main.GetHelp.storiesTitle.localized()
+            case .systemView:
+                chanelName = LocalizeKeys.Main.GetHelp.otherOptionsTitle.localized()
+            }
+            let chanelSharingControl = SocialSharingOptionControl()
+            chanelSharingControl
+                .setUp(style:
+                        SocialSharingOptionStyle(titleFont: StyleManager.General.Fonts.subHeaderFont,
+                                                 titleColor: StyleManager.General.Colors.Text.mainColor),
+                       chanel: $0,
+                       title: chanelName,
+                       image: #imageLiteral(resourceName: "pointsImage"))
+            chanelSharingControl.addTarget(self, action: #selector(didTapOnSharingAction(_:)), for: .touchUpInside)
+            socialSharingOptionsStackView.addArrangedSubview(chanelSharingControl)
+        }
     }
     
     private func setupStyle() {
@@ -45,10 +54,16 @@ class GetHelpViewController: UIViewController {
         otherOptionsLabel.font = StyleManager.General.Fonts.subtitleFont
         otherOptionsLabel.textColor = StyleManager.General.Colors.Text.mainColor
     }
+
+    var documentInteractionController: UIDocumentInteractionController!
+
+    @objc private func didTapOnSharingAction(_ sender: SocialSharingOptionControl) {
+        viewModel.didSelectHelpChanel(sender.socialSharingChanel)
+    }
     
     private func setupContent() {
         askFriendsLabel.text = LocalizeKeys.Main.GetHelp.askFriendsTitle.localized()
-        otherOptionsLabel.text = LocalizeKeys.Main.GetHelp.otherOptionsTitle.localized()
+        otherOptionsLabel.text = LocalizeKeys.Main.GetHelp.orTitle.localized()
     }
     
     @IBAction private func didSwipDown(_ sender: UITapGestureRecognizer) {

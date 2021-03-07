@@ -27,6 +27,7 @@
 // MARK: Get Help
 
 "askFriendsTitle" = "Ask friends";
-"otherOptionsTitle" = "Or";
+"orTitle" = "Or";
+"otherOptionsTitle" = "Other";
 "storiesTtile" = "Stories";
 "whatsappTitle" = "Whatsapp";

@@ -1,5 +1,5 @@
 //
-//  SocialSharingOptionView.swift
+//  SocialSharingOptionControl.swift
 //  SoccerQuiz
 //
 //  Created by Sitora Guliamova on 2/9/21.
@@ -9,7 +9,7 @@ import UIKit
 
 typealias SocialSharingOptionStyle = (titleFont: UIFont, titleColor: UIColor)
 
-class SocialSharingOptionView: UIView {
+class SocialSharingOptionControl: UIControl {
     private lazy var imageView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -24,6 +24,8 @@ class SocialSharingOptionView: UIView {
         return label
     }()
 
+    var socialSharingChanel: SocialSharingChanel!
+
     private func setupConstraints() {
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0).isActive = true
@@ -36,10 +38,12 @@ class SocialSharingOptionView: UIView {
 
     }
 
-    func setUp(style: SocialSharingOptionStyle, title: String, image: UIImage) {
+    func setUp(style: SocialSharingOptionStyle, chanel: SocialSharingChanel,
+               title: String, image: UIImage) {
         titleLabel.font = style.titleFont
         titleLabel.textColor = style.titleColor
         titleLabel.text = title
+        socialSharingChanel = chanel
 
         imageView.image = image
 

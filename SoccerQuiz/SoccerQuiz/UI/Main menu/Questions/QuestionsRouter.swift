@@ -26,6 +26,7 @@ extension QuestionsRouter: QuestionsRouterProtocol {
                 .instantiateViewController(withIdentifier: "GetHelpViewController") as? GetHelpViewController else {
             return
         }
+        getHelpController.viewModel = GetHelpViewModel()
         getHelpController.router = GetHelpRouter(controller: getHelpController)
         getHelpController.modalPresentationStyle = .overFullScreen
         getHelpController.modalTransitionStyle = .crossDissolve

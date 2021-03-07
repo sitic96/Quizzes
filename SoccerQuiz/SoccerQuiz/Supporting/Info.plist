@@ -56,13 +56,25 @@
 		<string>MontserratAlternates-Italic.ttf</string>
 		<string>MontserratAlternates-Light.ttf</string>
 		<string>MontserratAlternates-LightItalic.ttf</string>
-		<string>MontserratAlternates-Medium.ttfMontserratAlternates-MediumItalic.ttfMontserratAlternates-Regular.ttfMontserratAlternates-SemiBold.ttfMontserratAlternates-SemiBoldItalic.ttfMontserratAlternates-Thin.ttfMontserratAlternates-ThinItalic.ttf</string>
+		<string>MontserratAlternates-Medium.ttf
+MontserratAlternates-MediumItalic.ttf
+MontserratAlternates-Regular.ttf
+MontserratAlternates-SemiBold.ttf
+MontserratAlternates-SemiBoldItalic.ttf
+MontserratAlternates-Thin.ttf
+MontserratAlternates-ThinItalic.ttf</string>
 		<string>MontserratAlternates-MediumItalic.ttf</string>
 		<string>MontserratAlternates-Regular.ttf</string>
 		<string>MontserratAlternates-SemiBold.ttf</string>
 		<string>MontserratAlternates-SemiBoldItalic.ttf</string>
 		<string>MontserratAlternates-Thin.ttf</string>
 		<string>MontserratAlternates-ThinItalic.ttf</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>instagram-stories</string>
+		<string>whatsapp</string>
 	</array>
 </dict>
 </plist>
