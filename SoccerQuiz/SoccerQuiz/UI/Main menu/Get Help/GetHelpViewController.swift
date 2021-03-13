@@ -11,8 +11,6 @@ import Localize_Swift
 class GetHelpViewController: UIViewController {
     @IBOutlet private weak var askFriendsLabel: UILabel!
     @IBOutlet private weak var socialSharingOptionsStackView: UIStackView!
-    @IBOutlet private weak var otherOptionsLabel: UILabel!
-    @IBOutlet private weak var pointsView: UIView!
     @IBOutlet private weak var popupView: UIView!
 
     var viewModel: GetHelpViewModelProtocol!
@@ -22,12 +20,15 @@ class GetHelpViewController: UIViewController {
         super.viewDidLoad()
         setupStyle()
         setupContent()
+        bindViewModel()
 
         viewModel.availableChanels.forEach {
             var chanelName = ""
             switch $0 {
             case .stories:
                 chanelName = LocalizeKeys.Main.GetHelp.storiesTitle.localized()
+            case .whatsapp:
+                chanelName = LocalizeKeys.Main.GetHelp.whatsappTitle.localized()
             case .systemView:
                 chanelName = LocalizeKeys.Main.GetHelp.otherOptionsTitle.localized()
             }
@@ -43,6 +44,12 @@ class GetHelpViewController: UIViewController {
             socialSharingOptionsStackView.addArrangedSubview(chanelSharingControl)
         }
     }
+
+    private func bindViewModel() {
+        viewModel.didSelectSystemShare = { [weak self] in
+            self?.openSystemShare()
+        }
+    }
     
     private func setupStyle() {
         view.backgroundColor = StyleManager.GetHelpScreen.backgroundColor
@@ -50,9 +57,6 @@ class GetHelpViewController: UIViewController {
         
         askFriendsLabel.font = StyleManager.General.Fonts.subtitleFont
         askFriendsLabel.textColor = StyleManager.General.Colors.Text.mainColor
-        
-        otherOptionsLabel.font = StyleManager.General.Fonts.subtitleFont
-        otherOptionsLabel.textColor = StyleManager.General.Colors.Text.mainColor
     }
 
     var documentInteractionController: UIDocumentInteractionController!
@@ -63,7 +67,21 @@ class GetHelpViewController: UIViewController {
     
     private func setupContent() {
         askFriendsLabel.text = LocalizeKeys.Main.GetHelp.askFriendsTitle.localized()
-        otherOptionsLabel.text = LocalizeKeys.Main.GetHelp.orTitle.localized()
+    }
+
+    private func openSystemShare() {
+        let activityController = UIActivityViewController(
+            activityItems: ["viewModel.question"],
+            applicationActivities: nil)
+        activityController.completionWithItemsHandler = {(activityType,
+                                                          completed,
+                                                          returnedItems,
+                                                          activityError) -> Void in
+            if let activity = activityType, completed {
+                //TODO: report analytics
+            }
+        }
+        self.present(activityController, animated: true)
     }
     
     @IBAction private func didSwipDown(_ sender: UITapGestureRecognizer) {

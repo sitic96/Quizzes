@@ -9,7 +9,7 @@ import UIKit
 
 protocol QuestionsRouterProtocol {
     func close()
-    func showGetHelpScreen()
+    func showGetHelpScreen(for question: Question)
 }
 
 struct QuestionsRouter {
@@ -21,12 +21,12 @@ extension QuestionsRouter: QuestionsRouterProtocol {
         controller?.navigationController?.popViewController(animated: true)
     }
 
-    func showGetHelpScreen() {
+    func showGetHelpScreen(for question: Question) {
         guard let getHelpController = UIStoryboard(name: "Main", bundle: .main)
                 .instantiateViewController(withIdentifier: "GetHelpViewController") as? GetHelpViewController else {
             return
         }
-        getHelpController.viewModel = GetHelpViewModel()
+        getHelpController.viewModel = GetHelpViewModel(question: question)
         getHelpController.router = GetHelpRouter(controller: getHelpController)
         getHelpController.modalPresentationStyle = .overFullScreen
         getHelpController.modalTransitionStyle = .crossDissolve
