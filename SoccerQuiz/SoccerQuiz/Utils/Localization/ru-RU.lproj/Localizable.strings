@@ -22,3 +22,11 @@
 // MARK: Questions
 
 "needHelpButtonTitle" = "Нужна помощь?";
+
+// MARK: Get Help
+
+"askFriendsTitle" = "Попроси помощи у друзей";
+"orTitle" = "Или";
+"otherOptionsTitle" = "Другие опции";
+"storiesTtile" = "Stories";
+"whatsappTitle" = "Whatsapp";

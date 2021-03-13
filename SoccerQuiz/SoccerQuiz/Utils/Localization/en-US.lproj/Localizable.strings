@@ -23,3 +23,11 @@
 // MARK: Questions
 
 "needHelpButtonTitle" = "Need help?";
+
+// MARK: Get Help
+
+"askFriendsTitle" = "Ask friends";
+"orTitle" = "Or";
+"otherOptionsTitle" = "Other";
+"storiesTtile" = "Stories";
+"whatsappTitle" = "Whatsapp";

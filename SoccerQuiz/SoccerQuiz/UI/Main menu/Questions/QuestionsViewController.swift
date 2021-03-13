@@ -134,6 +134,10 @@ class QuestionsViewController: UIViewController {
             }
         }
     }
+
+    @IBAction private func didSelectGetHelp(_ sender: Any) {
+        router.showGetHelpScreen(for: viewModel.currentQuestion)
+    }
 }
 
 // MARK: KolodaViewDelegate, KolodaViewDataSource

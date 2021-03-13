@@ -12,6 +12,7 @@ protocol QuestionsViewModelProtocol {
     var questions: [Question] { get }
     var questionsWithStatus: [QuizQuestion] { get }
     var currentQuestionIndex: Int { get }
+    var currentQuestion: Question { get }
 
     var didSelectAnswer: (() -> Void)? { get set }
     var didChangeSelectedQuestion: ((_ changedQuestionsIndexes: [Int]) -> Void )? { get set }
@@ -52,6 +53,10 @@ extension QuestionsViewModel: QuestionsViewModelProtocol {
 
     var currentQuestionIndex: Int {
         selectedQuestionIndex
+    }
+
+    var currentQuestion: Question {
+        quiz.questions[selectedQuestionIndex].question
     }
 
     func didSelectAnswer(at index: Int) {
