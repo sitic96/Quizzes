@@ -90,4 +90,4 @@ iOSInjectionProject/
 *.generated.swift
 
 # Secret files
-*/Keys.plist
+**/Keys.plist
