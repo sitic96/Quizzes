@@ -7,17 +7,7 @@
 
 import Foundation
 
-enum QuestionTopContent {
-    case text(content: Content)
-    case image(content: Content)
-}
-
-enum QuestionBottomContent {
-    case options(options: [Option])
-    case dropBox(options: [Option])
-}
-
-struct Question {
+struct Question: Decodable {
     let id: Int
     let answer: Option
     let topContent: QuestionTopContent

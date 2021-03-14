@@ -85,6 +85,7 @@ extension QuizzesViewController: UICollectionViewDelegate, UICollectionViewDataS
 
         var overlayColor = UIColor.clear
         var textColor = UIColor.clear
+
         switch quiz.availabilityStatus {
         case .available, .started:
             overlayColor = StyleManager.MainScreen.availableOverlayColor

@@ -89,3 +89,5 @@ iOSInjectionProject/
 # https://github.com/mac-cain13/R.swift
 *.generated.swift
 
+# Secret files
+*/Keys.plist
