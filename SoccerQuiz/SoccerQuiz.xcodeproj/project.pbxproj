@@ -44,7 +44,6 @@
 		72731AF425B484F400F21370 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72731AE225B484F400F21370 /* MontserratAlternates-SemiBoldItalic.ttf */; };
 		72731AF525B484F400F21370 /* MontserratAlternates-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72731AE325B484F400F21370 /* MontserratAlternates-BoldItalic.ttf */; };
 		7279729D25B741F7008234D5 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279729C25B741F7008234D5 /* Option.swift */; };
-		727972A025B74239008234D5 /* CoreOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279729F25B74239008234D5 /* CoreOption.swift */; };
 		727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F2CD225B4D46D009EAB31 /* AuthRouter.swift */; };
 		7280A29325C336CF007554A8 /* BottomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280A29225C336CF007554A8 /* BottomContentView.swift */; };
 		7280A2A425C3530B007554A8 /* QuizDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280A2A325C3530B007554A8 /* QuizDetailsRouter.swift */; };
@@ -65,17 +64,18 @@
 		72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */; };
 		72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */; };
 		72D4950825D2AC880012E51D /* SocialSharingOptionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */; };
+		72E19BBD25FCD77900EE247E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BBC25FCD77900EE247E /* NetworkManager.swift */; };
+		72E19BC025FCD7C200EE247E /* QuizPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BBF25FCD7C200EE247E /* QuizPreview.swift */; };
+		72E19BC725FE84C600EE247E /* QuestionTopContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BC625FE84C600EE247E /* QuestionTopContent.swift */; };
+		72E19BCA25FE859400EE247E /* QuestionBottomContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BC925FE859400EE247E /* QuestionBottomContent.swift */; };
+		72E19BCF25FE86F700EE247E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BCE25FE86F700EE247E /* Quiz.swift */; };
+		72E19BD625FE96DB00EE247E /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E19BD525FE96DB00EE247E /* Keys.plist */; };
+		72E19BD925FE974200EE247E /* KeysParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BD825FE974200EE247E /* KeysParser.swift */; };
 		72EAA89A25F429D10009E295 /* GetHelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EAA89925F429D10009E295 /* GetHelpViewModel.swift */; };
 		72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */; };
 		72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */; };
-		72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB025B61EE600B401BC /* CachingManager.swift */; };
-		72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DB525B61F0000B401BC /* SoccerQuiz.xcdatamodeld */; };
-		72F24DF025B6240500B401BC /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DEF25B6240500B401BC /* CoreDataError.swift */; };
-		72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF225B6249500B401BC /* CoreQuiz.swift */; };
-		72F24DF625B624CE00B401BC /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF525B624CE00B401BC /* Quiz.swift */; };
-		72F24DF925B6255700B401BC /* CoreQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF825B6255700B401BC /* CoreQuestion.swift */; };
+		72F24DF625B624CE00B401BC /* LoadedQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DF525B624CE00B401BC /* LoadedQuiz.swift */; };
 		72F24DFC25B6258B00B401BC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DFB25B6258B00B401BC /* Question.swift */; };
-		72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24DFE25B62A3000B401BC /* CoreContent.swift */; };
 		72F24E0225B62A6A00B401BC /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F24E0125B62A6A00B401BC /* Content.swift */; };
 		B8A2C077AD0DBC719D5CA4B0 /* Pods_SoccerQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +144,13 @@
 		72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewController.swift; sourceTree = "<group>"; };
 		72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpRouter.swift; sourceTree = "<group>"; };
 		72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSharingOptionControl.swift; sourceTree = "<group>"; };
+		72E19BBC25FCD77900EE247E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		72E19BBF25FCD7C200EE247E /* QuizPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPreview.swift; sourceTree = "<group>"; };
+		72E19BC625FE84C600EE247E /* QuestionTopContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTopContent.swift; sourceTree = "<group>"; };
+		72E19BC925FE859400EE247E /* QuestionBottomContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBottomContent.swift; sourceTree = "<group>"; };
+		72E19BCE25FE86F700EE247E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		72E19BD525FE96DB00EE247E /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		72E19BD825FE974200EE247E /* KeysParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysParser.swift; sourceTree = "<group>"; };
 		72EAA89925F429D10009E295 /* GetHelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewModel.swift; sourceTree = "<group>"; };
 		72F24DA325B6142E00B401BC /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
 		72F24DA625B6181600B401BC /* WelcomeBackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackRouter.swift; sourceTree = "<group>"; };
@@ -151,7 +158,7 @@
 		72F24DB625B61F0000B401BC /* SoccerQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoccerQuiz.xcdatamodel; sourceTree = "<group>"; };
 		72F24DEF25B6240500B401BC /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 		72F24DF225B6249500B401BC /* CoreQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreQuiz.swift; sourceTree = "<group>"; };
-		72F24DF525B624CE00B401BC /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		72F24DF525B624CE00B401BC /* LoadedQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedQuiz.swift; sourceTree = "<group>"; };
 		72F24DF825B6255700B401BC /* CoreQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreQuestion.swift; sourceTree = "<group>"; };
 		72F24DFB25B6258B00B401BC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		72F24DFE25B62A3000B401BC /* CoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreContent.swift; sourceTree = "<group>"; };
@@ -292,6 +299,7 @@
 		72731AC625B4811A00F21370 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				72E19BDB25FE9A2200EE247E /* Keys */,
 				72731AD125B4849A00F21370 /* Fonts */,
 				72731ABA25B47F4500F21370 /* Info.plist */,
 				72731AB725B47F4500F21370 /* LaunchScreen.storyboard */,
@@ -451,9 +459,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		72E19BBB25FCD76500EE247E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				72E19BBC25FCD77900EE247E /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		72E19BCC25FE862D00EE247E /* BE Models */ = {
+			isa = PBXGroup;
+			children = (
+				72E19BBF25FCD7C200EE247E /* QuizPreview.swift */,
+				72F24DF525B624CE00B401BC /* LoadedQuiz.swift */,
+			);
+			path = "BE Models";
+			sourceTree = "<group>";
+		};
+		72E19BDB25FE9A2200EE247E /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				72E19BD825FE974200EE247E /* KeysParser.swift */,
+				72E19BD525FE96DB00EE247E /* Keys.plist */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
 		72F24DAF25B61ED300B401BC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				72E19BBB25FCD76500EE247E /* Network */,
 				72F24DB425B61EEA00B401BC /* Caching */,
 			);
 			path = Managers;
@@ -493,10 +528,13 @@
 			isa = PBXGroup;
 			children = (
 				72B0C26225BA10EB00CDFC70 /* FakeData */,
-				72F24DF525B624CE00B401BC /* Quiz.swift */,
+				72E19BCC25FE862D00EE247E /* BE Models */,
 				72F24DFB25B6258B00B401BC /* Question.swift */,
 				72F24E0125B62A6A00B401BC /* Content.swift */,
 				7279729C25B741F7008234D5 /* Option.swift */,
+				72E19BC625FE84C600EE247E /* QuestionTopContent.swift */,
+				72E19BC925FE859400EE247E /* QuestionBottomContent.swift */,
+				72E19BCE25FE86F700EE247E /* Quiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,6 +632,7 @@
 				72731AE925B484F400F21370 /* MontserratAlternates-Thin.ttf in Resources */,
 				72731AF325B484F400F21370 /* MontserratAlternates-Black.ttf in Resources */,
 				72731AF225B484F400F21370 /* MontserratAlternates-BlackItalic.ttf in Resources */,
+				72E19BD625FE96DB00EE247E /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,22 +685,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				727972A025B74239008234D5 /* CoreOption.swift in Sources */,
 				722BED4E25B497A3008023B2 /* AuthViewController.swift in Sources */,
 				72731AB125B47F4300F21370 /* QuizzesViewController.swift in Sources */,
 				727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */,
+				72E19BBD25FCD77900EE247E /* NetworkManager.swift in Sources */,
 				72503DFE25BF5A8A000F9814 /* Question+fakeArray.swift in Sources */,
-				72F24DB725B61F0000B401BC /* SoccerQuiz.xcdatamodeld in Sources */,
-				72F24DFF25B62A3000B401BC /* CoreContent.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,
 				72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */,
 				72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
-				72F24DF325B6249500B401BC /* CoreQuiz.swift in Sources */,
 				72B9DCE925C3313E00A4032C /* QuestionKolodaView.swift in Sources */,
 				7280A29325C336CF007554A8 /* BottomContentView.swift in Sources */,
 				72503E0F25BF699D000F9814 /* QuizzesRouter.swift in Sources */,
+				72E19BCA25FE859400EE247E /* QuestionBottomContent.swift in Sources */,
 				72B9DCE125C32FF600A4032C /* QuestionsViewController.swift in Sources */,
+				72E19BC725FE84C600EE247E /* QuestionTopContent.swift in Sources */,
 				72503E0825BF62AB000F9814 /* QuestionCollectionViewCell.swift in Sources */,
 				72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */,
 				72503E0425BF6044000F9814 /* QuizDetailsViewController.swift in Sources */,
@@ -672,10 +710,8 @@
 				72B9DCE425C3307600A4032C /* QuestionsViewModel.swift in Sources */,
 				72503E0C25BF6364000F9814 /* QuizDetailsViewModel.swift in Sources */,
 				72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */,
-				72F24DF925B6255700B401BC /* CoreQuestion.swift in Sources */,
 				72F24DA725B6181600B401BC /* WelcomeBackRouter.swift in Sources */,
 				722BED5225B497B3008023B2 /* WelcomeBackViewController.swift in Sources */,
-				72F24DB125B61EE600B401BC /* CachingManager.swift in Sources */,
 				7208C48625B74B4C0089EC82 /* QuizesViewModel.swift in Sources */,
 				72B9DCF025C3323B00A4032C /* UIView+nibLoadable.swift in Sources */,
 				72B5D1FD25B4B4DB00761F9D /* LocalizeKeys.swift in Sources */,
@@ -683,13 +719,15 @@
 				7280A2A425C3530B007554A8 /* QuizDetailsRouter.swift in Sources */,
 				72F24DFC25B6258B00B401BC /* Question.swift in Sources */,
 				72B9DCFA25C3330A00A4032C /* TopContentView.swift in Sources */,
+				72E19BD925FE974200EE247E /* KeysParser.swift in Sources */,
 				72731AAD25B47F4300F21370 /* AppDelegate.swift in Sources */,
+				72E19BC025FCD7C200EE247E /* QuizPreview.swift in Sources */,
 				7279729D25B741F7008234D5 /* Option.swift in Sources */,
 				72731ACE25B481D200F21370 /* StyleManager.swift in Sources */,
-				72F24DF025B6240500B401BC /* CoreDataError.swift in Sources */,
 				72F24DA425B6142E00B401BC /* WelcomeBackViewModel.swift in Sources */,
-				72F24DF625B624CE00B401BC /* Quiz.swift in Sources */,
+				72F24DF625B624CE00B401BC /* LoadedQuiz.swift in Sources */,
 				7203D14725B4CEF400BFA893 /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */,
+				72E19BCF25FE86F700EE247E /* Quiz.swift in Sources */,
 				72EAA89A25F429D10009E295 /* GetHelpViewModel.swift in Sources */,
 				722BED5A25B4A49D008023B2 /* Const.swift in Sources */,
 			);

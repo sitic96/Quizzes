@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum OptionType: String {
+enum OptionType: String, Decodable {
     case player
     case club
 }
 
-struct Option {
+struct Option: Decodable {
     let id: Int
     let type: OptionType
     let title: String

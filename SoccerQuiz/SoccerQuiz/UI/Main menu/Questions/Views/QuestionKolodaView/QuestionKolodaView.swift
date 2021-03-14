@@ -32,22 +32,22 @@ class QuestionKolodaView: UIView {
         setupGradient()
         overlayView.backgroundColor =
             StyleManager.General.Colors.mainColor
-        switch question.topContent {
-        case .text(let content):
+        switch question.topContent.type {
+        case .text:
             let style = TopContentTextStyle(font: StyleManager.General.Fonts.subtitleFont,
                                             textColor: StyleManager.General.Colors.Text.whiteColor)
-            topContentView.setup(for: .text(style: style, text: content.data))
-        case .image(let content):
-            topContentView.setup(for: .image(imageURLString: content.data))
+            topContentView.setup(for: .text(style: style, text: question.topContent.content.data))
+        case .image:
+            topContentView.setup(for: .image(imageURLString: question.topContent.content.data))
         }
 
-        switch question.bottomContent {
-        case .dropBox(let options):
+        switch question.bottomContent.type {
+        case .dropBox:
             break
-        case .options(let options):
+        case .options:
             let style = BottomContentTextStyle(font: StyleManager.General.Fonts.semibolMainFont,
                                                textColor: StyleManager.General.Colors.mainColor)
-            bottomContentView.setup(type: .options(style: style), options: options)
+            bottomContentView.setup(type: .options(style: style), options: question.bottomContent.content)
             bottomContentView.delegate = delegate
         }
     }
