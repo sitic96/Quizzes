@@ -9,6 +9,7 @@ import UIKit
 
 protocol WelcomeBackRouterProtocol {
     func goToMainScreen()
+    func goToLoadingScreen()
 }
 
 struct WelcomeBackRouter {
@@ -22,10 +23,21 @@ extension WelcomeBackRouter: WelcomeBackRouterProtocol {
               let quizzesVC = mainScreenFirstController.viewControllers.first as? QuizzesViewController else {
             return
         }
-        quizzesVC.viewModel = QuizesViewModel(quizzes: Quiz.fakeArray())
+        quizzesVC.viewModel = QuizesViewModel(previews: [])
         quizzesVC.router = QuizzesRouter(controller: quizzesVC)
         controller?.view.window?.rootViewController = mainScreenFirstController
         UIView.transition(with: window, duration: 0.3,
                           options: .transitionCrossDissolve, animations: nil)
+    }
+
+    func goToLoadingScreen() {
+        guard let loadingVC = UIStoryboard(name: "Loading", bundle: .main)
+                .instantiateInitialViewController() as? LoadingViewController else {
+            return
+        }
+        loadingVC.viewModel = LoadingViewModel(networkManager: NetworkManager.shared)
+        loadingVC.router = LoadingRouter(controller: loadingVC)
+        loadingVC.modalPresentationStyle = .overFullScreen
+        controller?.present(loadingVC, animated: true, completion: nil)
     }
 }

@@ -47,6 +47,9 @@
 		727F2CD325B4D46D009EAB31 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F2CD225B4D46D009EAB31 /* AuthRouter.swift */; };
 		7280A29325C336CF007554A8 /* BottomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280A29225C336CF007554A8 /* BottomContentView.swift */; };
 		7280A2A425C3530B007554A8 /* QuizDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280A2A325C3530B007554A8 /* QuizDetailsRouter.swift */; };
+		72A9492225FFF41900D6142F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9492125FFF41900D6142F /* LoadingViewController.swift */; };
+		72A9492525FFF4A500D6142F /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9492425FFF4A500D6142F /* LoadingViewModel.swift */; };
+		72AC3B0625FEA48100827D77 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AC3B0525FEA48100827D77 /* Loading.storyboard */; };
 		72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0C25E25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift */; };
 		72B0C26425BA10FC00CDFC70 /* Quiz+fakeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0C26325BA10FC00CDFC70 /* Quiz+fakeArray.swift */; };
 		72B0C26925BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0C26825BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift */; };
@@ -64,6 +67,8 @@
 		72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */; };
 		72D4950425D2AB2C0012E51D /* GetHelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */; };
 		72D4950825D2AC880012E51D /* SocialSharingOptionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */; };
+		72D7F5F025FFFE7B0076E71E /* LoadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7F5EF25FFFE7B0076E71E /* LoadingRouter.swift */; };
+		72DE471E25FFFA78000DF360 /* UIViewController+presentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DE471D25FFFA78000DF360 /* UIViewController+presentAlert.swift */; };
 		72E19BBD25FCD77900EE247E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BBC25FCD77900EE247E /* NetworkManager.swift */; };
 		72E19BC025FCD7C200EE247E /* QuizPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BBF25FCD7C200EE247E /* QuizPreview.swift */; };
 		72E19BC725FE84C600EE247E /* QuestionTopContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E19BC625FE84C600EE247E /* QuestionTopContent.swift */; };
@@ -126,6 +131,9 @@
 		727F2CD225B4D46D009EAB31 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		7280A29225C336CF007554A8 /* BottomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomContentView.swift; sourceTree = "<group>"; };
 		7280A2A325C3530B007554A8 /* QuizDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailsRouter.swift; sourceTree = "<group>"; };
+		72A9492125FFF41900D6142F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		72A9492425FFF4A500D6142F /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		72AC3B0525FEA48100827D77 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		72B0C25E25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
 		72B0C26325BA10FC00CDFC70 /* Quiz+fakeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quiz+fakeArray.swift"; sourceTree = "<group>"; };
 		72B0C26825BA1FE400CDFC70 /* QuizzesCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 		72D494F825D2A0DE0012E51D /* GetHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpViewController.swift; sourceTree = "<group>"; };
 		72D4950325D2AB2C0012E51D /* GetHelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpRouter.swift; sourceTree = "<group>"; };
 		72D4950725D2AC880012E51D /* SocialSharingOptionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSharingOptionControl.swift; sourceTree = "<group>"; };
+		72D7F5EF25FFFE7B0076E71E /* LoadingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRouter.swift; sourceTree = "<group>"; };
+		72DE471D25FFFA78000DF360 /* UIViewController+presentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+presentAlert.swift"; sourceTree = "<group>"; };
 		72E19BBC25FCD77900EE247E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		72E19BBF25FCD7C200EE247E /* QuizPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPreview.swift; sourceTree = "<group>"; };
 		72E19BC625FE84C600EE247E /* QuestionTopContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTopContent.swift; sourceTree = "<group>"; };
@@ -313,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				72731ACD25B481D200F21370 /* StyleManager.swift */,
+				72A9492725FFF9F500D6142F /* General */,
+				72AC3B0425FEA44200827D77 /* Loading */,
 				72731ACC25B4815200F21370 /* Main menu */,
 				72731AC825B4813800F21370 /* Login */,
 			);
@@ -372,6 +384,25 @@
 				7280A29225C336CF007554A8 /* BottomContentView.swift */,
 			);
 			path = BottomContentView;
+			sourceTree = "<group>";
+		};
+		72A9492725FFF9F500D6142F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				72DE471D25FFFA78000DF360 /* UIViewController+presentAlert.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		72AC3B0425FEA44200827D77 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				72AC3B0525FEA48100827D77 /* Loading.storyboard */,
+				72A9492125FFF41900D6142F /* LoadingViewController.swift */,
+				72A9492425FFF4A500D6142F /* LoadingViewModel.swift */,
+				72D7F5EF25FFFE7B0076E71E /* LoadingRouter.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		72B0C25D25BA0E7700CDFC70 /* Views */ = {
@@ -621,6 +652,7 @@
 				72731AF125B484F400F21370 /* MontserratAlternates-MediumItalic.ttf in Resources */,
 				72731AEA25B484F400F21370 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				72B9DCEC25C3316A00A4032C /* QuestionKolodaView.xib in Resources */,
+				72AC3B0625FEA48100827D77 /* Loading.storyboard in Resources */,
 				72731AED25B484F400F21370 /* MontserratAlternates-Regular.ttf in Resources */,
 				72731AB625B47F4500F21370 /* Assets.xcassets in Resources */,
 				72731AE425B484F400F21370 /* MontserratAlternates-Light.ttf in Resources */,
@@ -692,16 +724,20 @@
 				72503DFE25BF5A8A000F9814 /* Question+fakeArray.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,
 				72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */,
+				72DE471E25FFFA78000DF360 /* UIViewController+presentAlert.swift in Sources */,
 				72D494F925D2A0DE0012E51D /* GetHelpViewController.swift in Sources */,
 				722BED5625B49D6B008023B2 /* AuthViewModel.swift in Sources */,
 				72B9DCE925C3313E00A4032C /* QuestionKolodaView.swift in Sources */,
 				7280A29325C336CF007554A8 /* BottomContentView.swift in Sources */,
 				72503E0F25BF699D000F9814 /* QuizzesRouter.swift in Sources */,
 				72E19BCA25FE859400EE247E /* QuestionBottomContent.swift in Sources */,
+				72A9492225FFF41900D6142F /* LoadingViewController.swift in Sources */,
 				72B9DCE125C32FF600A4032C /* QuestionsViewController.swift in Sources */,
 				72E19BC725FE84C600EE247E /* QuestionTopContent.swift in Sources */,
 				72503E0825BF62AB000F9814 /* QuestionCollectionViewCell.swift in Sources */,
+				72A9492525FFF4A500D6142F /* LoadingViewModel.swift in Sources */,
 				72D33F2225C9D64E0018A514 /* UIViewController+navigationTitleColor.swift in Sources */,
+				72D7F5F025FFFE7B0076E71E /* LoadingRouter.swift in Sources */,
 				72503E0425BF6044000F9814 /* QuizDetailsViewController.swift in Sources */,
 				72D33F2625C9EB5B0018A514 /* ColorRoundButton.swift in Sources */,
 				72F24E0225B62A6A00B401BC /* Content.swift in Sources */,

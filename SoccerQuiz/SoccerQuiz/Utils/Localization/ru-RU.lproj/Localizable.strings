@@ -16,6 +16,12 @@
 "welcomeBackMessage" = "С возвращением, \n%@";
 "firstWelcomeMessage" = "Добро пожаловать, \n%@";
 
+// MARK: - Loading screen
+
+"loadingErrorAlertTitle" = "Ошибка!";
+"loadingErrorAlertMessage" = "Извините, не удалось загрузить квизы";
+"loadingAlertTryAgainTitle" = "Еще раз";
+
 // MARK: Quizes
 "selectThemeTitle" = "Выбери тему:";
 

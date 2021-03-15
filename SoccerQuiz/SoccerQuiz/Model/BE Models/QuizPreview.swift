@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct QuizPreview: Decodable {
+struct QuizPreview: Decodable, QuizPreviewable {
     let quizId: Int
     let title: String
     let description: String

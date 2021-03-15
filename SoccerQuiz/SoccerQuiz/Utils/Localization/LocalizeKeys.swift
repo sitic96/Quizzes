@@ -18,6 +18,12 @@ struct LocalizeKeys {
         static let firstWelcomeMessage = "firstWelcomeMessage"
     }
 
+    struct Loading {
+        static let errorAlertTitle = "loadingErrorAlertTitle"
+        static let errorAlertMessage = "loadingErrorAlertMessage"
+        static let alertTryAgainTitle = "loadingAlertTryAgainTitle"
+    }
+
     struct Main {
         struct Quizes {
             static let selectThemeTitle = "selectThemeTitle"
