@@ -10,16 +10,16 @@ import Foundation
 protocol QuizesViewModelProtocol {
     var appTitle: String { get }
     var pointsNumber: Int { get }
-    var allQuizzes: [Quiz] { get }
+    var allQuizzes: [QuizPreviewable] { get }
 }
 
 class QuizesViewModel {
-    private let quizzes: [Quiz]
+    private let previews: [QuizPreview]
 
     var didToogleQuizzesState: (() -> Void)?
 
-    init(quizzes: [Quiz]) {
-        self.quizzes = quizzes
+    init(previews: [QuizPreview]) {
+        self.previews = previews
     }
 }
 
@@ -32,9 +32,7 @@ extension QuizesViewModel: QuizesViewModelProtocol {
         5
     }
 
-    var allQuizzes: [Quiz] {
-        quizzes.sorted(by: {
-            $0.availabilityStatus < $1.availabilityStatus
-        })
+    var allQuizzes: [QuizPreviewable] {
+        previews
     }
 }

@@ -16,6 +16,12 @@
 "welcomeBackMessage" = "Welcome back, \n%@";
 "firstWelcomeMessage" = "Welcome, \n%@";
 
+// MARK: - Loading screen
+
+"loadingErrorAlertTitle" = "Error!";
+"loadingErrorAlertMessage" = "Sorry, we can't load quizzes";
+"loadingAlertTryAgainTitle" = "Try again";
+
 // MARK: Quizes
 
 "selectThemeTitle" = "Select theme:";

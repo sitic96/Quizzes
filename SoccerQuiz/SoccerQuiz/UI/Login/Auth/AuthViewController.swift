@@ -36,7 +36,7 @@ class AuthViewController: UIViewController {
 
     private func bindViewModel() {
         viewModel.didSetNewName = { [weak self] in
-            self?.router.goNext()
+            self?.router.goToLoadingScreen()
         }
     }
 

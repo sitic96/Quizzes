@@ -7,6 +7,17 @@
 
 import Foundation
 
+protocol QuizPreviewable {
+    var title: String { get }
+    var availabilityStatus: AvailabilityStatus { get }
+}
+
+extension QuizPreviewable {
+    var availabilityStatus: AvailabilityStatus {
+        .notAvailable
+    }
+}
+
 enum AvailabilityStatus: Comparable {
     case finished
     case started
@@ -22,7 +33,7 @@ enum QuizQuestionStatus: CaseIterable {
 
 typealias QuizQuestion = (question: Question, status: QuizQuestionStatus)
 
-struct Quiz {
+struct Quiz: QuizPreviewable {
     let id: Int
     let title: String
     let description: String
