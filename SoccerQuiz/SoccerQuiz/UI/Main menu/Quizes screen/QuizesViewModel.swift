@@ -10,7 +10,7 @@ import Foundation
 protocol QuizesViewModelProtocol {
     var appTitle: String { get }
     var pointsNumber: Int { get }
-    var allQuizzes: [QuizPreviewable] { get }
+    var allQuizzes: [QuizPreview] { get }
 }
 
 class QuizesViewModel {
@@ -32,7 +32,7 @@ extension QuizesViewModel: QuizesViewModelProtocol {
         5
     }
 
-    var allQuizzes: [QuizPreviewable] {
+    var allQuizzes: [QuizPreview] {
         previews
     }
 }
