@@ -9,5 +9,5 @@ import Foundation
 
 struct Content: Decodable {
     let id: Int
-    let data: String
+    let content: String
 }

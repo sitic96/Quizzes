@@ -18,14 +18,14 @@ extension QuizPreviewable {
     }
 }
 
-enum AvailabilityStatus: Comparable {
+enum AvailabilityStatus: String {
     case finished
     case started
     case available
     case notAvailable
 }
 
-enum QuizQuestionStatus: CaseIterable {
+enum QuizQuestionStatus: String, CaseIterable {
     case notStarted
     case started
     case finished

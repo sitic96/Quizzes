@@ -36,9 +36,9 @@ class QuestionKolodaView: UIView {
         case .text:
             let style = TopContentTextStyle(font: StyleManager.General.Fonts.subtitleFont,
                                             textColor: StyleManager.General.Colors.Text.whiteColor)
-            topContentView.setup(for: .text(style: style, text: question.topContent.content.data))
+            topContentView.setup(for: .text(style: style, text: question.topContent.content.content))
         case .image:
-            topContentView.setup(for: .image(imageURLString: question.topContent.content.data))
+            topContentView.setup(for: .image(imageURLString: question.topContent.content.content))
         }
 
         switch question.bottomContent.type {
@@ -47,7 +47,7 @@ class QuestionKolodaView: UIView {
         case .options:
             let style = BottomContentTextStyle(font: StyleManager.General.Fonts.semibolMainFont,
                                                textColor: StyleManager.General.Colors.mainColor)
-            bottomContentView.setup(type: .options(style: style), options: question.bottomContent.content)
+            bottomContentView.setup(type: .options(style: style), options: question.bottomContent.options)
             bottomContentView.delegate = delegate
         }
     }

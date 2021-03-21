@@ -9,4 +9,5 @@ import Foundation
 
 enum CoreDataError: Error {
     case cantInitEnity(String)
+    case errorInSaving(underlineError: Error)
 }
