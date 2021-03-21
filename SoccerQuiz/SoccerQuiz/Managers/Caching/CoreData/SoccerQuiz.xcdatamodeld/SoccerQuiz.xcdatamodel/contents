@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreContent" representedClassName="CoreContent" syncable="YES" codeGenerationType="category">
         <attribute name="data" attributeType="String"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="topContent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuestionTopContent" inverseName="content" inverseEntity="CoreQuestionTopContent"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -13,6 +14,8 @@
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
+        <relationship name="question" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuestion" inverseName="answer" inverseEntity="CoreQuestion"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuestionBottomContent" inverseName="options" inverseEntity="CoreQuestionBottomContent"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -20,12 +23,28 @@
         </uniquenessConstraints>
     </entity>
     <entity name="CoreQuestion" representedClassName="CoreQuestion" syncable="YES" codeGenerationType="category">
-        <attribute name="botContentType" attributeType="String"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="topContentType" attributeType="String"/>
-        <relationship name="botContent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreOption"/>
-        <relationship name="quiz" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
-        <relationship name="topContent" maxCount="1" deletionRule="Nullify" destinationEntity="CoreContent"/>
+        <relationship name="answer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreOption" inverseName="question" inverseEntity="CoreOption"/>
+        <relationship name="botContent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreQuestionBottomContent" inverseName="questions" inverseEntity="CoreQuestionBottomContent"/>
+        <relationship name="quizQuestion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuizQuestion" inverseName="question" inverseEntity="CoreQuizQuestion"/>
+        <relationship name="topContent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreQuestionTopContent" inverseName="questions" inverseEntity="CoreQuestionTopContent"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CoreQuestionBottomContent" representedClassName="CoreQuestionBottomContent" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CoreOption" inverseName="questions" inverseEntity="CoreOption"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuestion" inverseName="botContent" inverseEntity="CoreQuestion"/>
+    </entity>
+    <entity name="CoreQuestionTopContent" representedClassName="CoreQuestionTopContent" syncable="YES" codeGenerationType="category">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreContent" inverseName="topContent" inverseEntity="CoreContent"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuestion" inverseName="topContent" inverseEntity="CoreQuestion"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -33,21 +52,38 @@
         </uniquenessConstraints>
     </entity>
     <entity name="CoreQuiz" representedClassName="CoreQuiz" syncable="YES" codeGenerationType="category">
+        <attribute name="availabilityStatus" attributeType="String"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="imageURL" attributeType="String"/>
         <attribute name="subtitle" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuiz"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreQuizQuestion" inverseName="quiz" inverseEntity="CoreQuizQuestion"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="CoreQuizQuestion" representedClassName="CoreQuizQuestion" syncable="YES" codeGenerationType="category">
+        <attribute name="questionId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="quizId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreQuestion" inverseName="quizQuestion" inverseEntity="CoreQuestion"/>
+        <relationship name="quiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreQuiz" inverseName="questions" inverseEntity="CoreQuiz"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="questionId"/>
+                <constraint value="quizId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <elements>
-        <element name="CoreContent" positionX="-36" positionY="45" width="128" height="73"/>
-        <element name="CoreOption" positionX="-54" positionY="54" width="128" height="88"/>
-        <element name="CoreQuestion" positionX="-54" positionY="0" width="128" height="133"/>
-        <element name="CoreQuiz" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="CoreContent" positionX="-35.765625" positionY="-93.8984375" width="128" height="88"/>
+        <element name="CoreOption" positionX="289.33203125" positionY="-89.7421875" width="128" height="118"/>
+        <element name="CoreQuestion" positionX="-56.99609375" positionY="-314.6640625" width="128" height="118"/>
+        <element name="CoreQuiz" positionX="-340.75" positionY="-186.5625" width="128" height="133"/>
+        <element name="CoreQuizQuestion" positionX="-254.828125" positionY="181.625" width="128" height="118"/>
+        <element name="CoreQuestionBottomContent" positionX="-41.84375" positionY="176.84375" width="128" height="103"/>
+        <element name="CoreQuestionTopContent" positionX="294.05859375" positionY="204.4375" width="128" height="103"/>
     </elements>
 </model>

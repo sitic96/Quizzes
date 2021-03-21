@@ -10,6 +10,7 @@ import Foundation
 enum OptionType: String, Decodable {
     case player
     case club
+    case unknown
 }
 
 struct Option: Decodable {

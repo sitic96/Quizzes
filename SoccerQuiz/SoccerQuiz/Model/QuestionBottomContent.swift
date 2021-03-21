@@ -14,5 +14,5 @@ enum QuestionBottomContentType: String, Decodable {
 struct QuestionBottomContent: Decodable {
     let id: Int
     let type: QuestionBottomContentType
-    let content: [Option]
+    let options: [Option]
 }

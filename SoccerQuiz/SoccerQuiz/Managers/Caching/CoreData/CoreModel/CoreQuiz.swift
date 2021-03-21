@@ -8,15 +8,40 @@
 import Foundation
 import CoreData
 
-@objc class CoreQuiz: NSManagedObject {
-    private static let entityName = "CoreQuiz"
+@objc(CoreQuiz)
+class CoreQuiz: NSManagedObject {
+    static let entityName = "CoreQuiz"
 
-    init(from quiz: Quiz, into context: NSManagedObjectContext) throws {
+    public required convenience init(from quiz: Quiz, into context: NSManagedObjectContext) throws {
         guard let entityDescriptor = NSEntityDescription.entity(forEntityName: CoreQuiz.entityName,
                                                                 in: context) else {
             throw CoreDataError.cantInitEnity(CoreQuiz.entityName)
         }
-        super.init(entity: entityDescriptor, insertInto: context)
+        self.init(entity: entityDescriptor, insertInto: context)
         self.id = Int32(quiz.id)
+        self.title = quiz.title
+        self.imageURL = quiz.imageURLString
+        self.subtitle = quiz.description
+        self.availabilityStatus = quiz.availabilityStatus.rawValue
+        self.questions = try NSSet(array: quiz.questions
+                                .map { try CoreQuizQuestion(from: $0, quiz: quiz,
+                                                            into: context) })
+    }
+
+    func toQuiz() -> Quiz? {
+        guard let title = self.title,
+              let desc = self.subtitle,
+              let imageURLString = self.imageURL,
+              let status = AvailabilityStatus(rawValue: self.availabilityStatus ?? ""),
+              let questions = (self.questions?
+                                .compactMap { ($0 as? CoreQuizQuestion)?.toQuizQuestion() }) else {
+            return nil
+        }
+        return Quiz(id: Int(self.id),
+                    title: title,
+                    description: desc,
+                    imageURLString: imageURLString,
+                    availabilityStatus: status,
+                    questions: questions)
     }
 }

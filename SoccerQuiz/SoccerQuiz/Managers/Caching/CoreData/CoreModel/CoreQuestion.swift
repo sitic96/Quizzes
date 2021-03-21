@@ -8,34 +8,34 @@
 import Foundation
 import CoreData
 
-@objc class CoreQuestion: NSManagedObject {
-    private static let entityName = "CoreQuestion"
+@objc(CoreQuestion)
+class CoreQuestion: NSManagedObject {
+    static let entityName = "CoreQuestion"
 
-    init(from question: Question, into context: NSManagedObjectContext) throws {
+    public required convenience init(from question: Question, into context: NSManagedObjectContext) throws {
         guard let entityDescription = NSEntityDescription.entity(forEntityName: CoreQuestion.entityName, in: context) else {
             throw CoreDataError.cantInitEnity(CoreQuestion.entityName)
         }
-        super.init(entity: entityDescription, insertInto: context)
+        self.init(entity: entityDescription, insertInto: context)
         self.id = Int32(question.id)
 
-        switch question.topContent {
-        case .image(let content):
-            self.topContentType = "image"
-            self.topContent = try CoreContent(from: content, into: context)
-        case .text(let content):
-            self.topContentType = "text"
-            self.topContent = try CoreContent(from: content, into: context)
-        }
+        self.answer = try CoreOption(from: question.answer, into: context)
 
-        switch question.bottomContent {
-        case .dropBox(let options):
-            self.botContentType = "dropBox"
-            self.botContent = try NSSet(array: options.map { try CoreOption(from: $0,
-                                                                            into: context) })
-        case .options(let options):
-            self.botContentType = "4options"
-            self.botContent = try NSSet(array: options.map { try CoreOption(from: $0,
-                                                                            into: context) })
+        self.topContent = try CoreQuestionTopContent(from: question.topContent,
+                                                     into: context)
+        self.botContent = try CoreQuestionBottomContent(from: question.bottomContent,
+                                                                             into: context)
+    }
+
+    func toQuestion() -> Question? {
+        guard let answer = self.answer?.toOption(),
+              let fetchedTopContent = self.topContent?.toTopContent(),
+              let fetchedBotContent = self.botContent?.toBotContent() else {
+            return nil
         }
+        return Question(id: Int(self.id),
+                        answer: answer,
+                        topContent: fetchedTopContent,
+                        bottomContent: fetchedBotContent)
     }
 }

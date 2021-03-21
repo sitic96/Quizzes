@@ -8,15 +8,20 @@
 import Foundation
 import CoreData
 
-@objc class CoreContent: NSManagedObject {
-    private static var entityName = "CoreContent"
+@objc(CoreContent)
+class CoreContent: NSManagedObject {
+    static var entityName = "CoreContent"
 
-    init(from content: Content, into context: NSManagedObjectContext) throws {
+    public required convenience init(from content: Content, into context: NSManagedObjectContext) throws {
         guard let entityDescriptor = NSEntityDescription.entity(forEntityName: CoreContent.entityName, in: context) else {
             throw CoreDataError.cantInitEnity(CoreContent.entityName)
         }
-        super.init(entity: entityDescriptor, insertInto: context)
+        self.init(entity: entityDescriptor, insertInto: context)
         self.id = Int32(content.id)
-        self.data = content.data
+        self.data = content.content
+    }
+
+    func toContent() -> Content {
+        Content(id: Int(self.id), content: self.data ?? "")
     }
 }
