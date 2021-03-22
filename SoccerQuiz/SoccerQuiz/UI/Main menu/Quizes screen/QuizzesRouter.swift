@@ -8,7 +8,7 @@
 import UIKit
 
 protocol QuizzesRouterProtocol {
-    func goToDetails(of quiz: QuizPreviewable)
+    func goToDetails(of quiz: QuizPreview)
 }
 
 struct QuizzesRouter {
@@ -16,14 +16,15 @@ struct QuizzesRouter {
 }
 
 extension QuizzesRouter: QuizzesRouterProtocol {
-    func goToDetails(of quiz: QuizPreviewable) {
-        guard let quizDetailcVC = UIStoryboard(name: "Main",
+    func goToDetails(of quiz: QuizPreview) {
+        guard let quizPreviewVC = UIStoryboard(name: "Main",
                                                bundle: .main)
-                .instantiateViewController(withIdentifier: "QuizDetailsViewController") as? QuizDetailsViewController else {
+                .instantiateViewController(withIdentifier: "QuizPreviewViewController") as? QuizPreviewViewController else {
             return
         }
-        quizDetailcVC.viewModel = QuizDetailsViewModel(quiz: Quiz.fakeArray()[0])
-        quizDetailcVC.router = QuizDetailsRouter(controller: quizDetailcVC)
-        controller?.navigationController?.pushViewController(quizDetailcVC, animated: true)
+        quizPreviewVC.viewModel = QuizPreviewViewModel(quizPreview: quiz)
+        quizPreviewVC.router = QuizPreviewRouter(controller: quizPreviewVC)
+
+        controller?.present(quizPreviewVC, animated: true, completion: nil)
     }
 }

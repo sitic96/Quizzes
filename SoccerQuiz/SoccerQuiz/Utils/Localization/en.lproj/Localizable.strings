@@ -37,3 +37,8 @@
 "otherOptionsTitle" = "Other";
 "storiesTtile" = "Stories";
 "whatsappTitle" = "Whatsapp";
+
+// MARK: - Quiz Preview
+
+"buyQuizTitle" = "Start playing";
+"playQuizTitle" = "Play";
