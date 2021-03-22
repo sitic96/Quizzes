@@ -15,10 +15,12 @@ class QuizPreviewViewController: UIViewController {
     @IBOutlet private weak var quizDescriptionLabel: UILabel!
     @IBOutlet private weak var gradientView: UIView!
     @IBOutlet private weak var buyButton: UIButton!
+    @IBOutlet private weak var closeButton: UIButton!
 
     private var isFirstLayoutSubviews = true
 
     var viewModel: QuizPreviewViewModelProtocol!
+    var router: QuizPreviewRouterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,10 @@ class QuizPreviewViewController: UIViewController {
         } else {
             buyButton.setTitle(LocalizeKeys.Main.QuizPreview.buyQuizTitle.localized(),
                                for: .normal)
+        }
+
+        if #available(iOS 13.0, *) {
+            closeButton.isHidden = true
         }
     }
 
@@ -52,6 +58,10 @@ class QuizPreviewViewController: UIViewController {
         quizDescriptionLabel.font = StyleManager.General.Fonts.mainFont
         quizDescriptionLabel.textColor = StyleManager.General.Colors.black
 
+        closeButton.backgroundColor = StyleManager.General.Colors.mainColor
+        closeButton.layer.cornerRadius = Const.closeButtonCornerRadius
+        closeButton.tintColor = StyleManager.General.Colors.white
+
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor,
                                 StyleManager.General.Colors.gradientStartColor.withAlphaComponent(0.6).cgColor,
@@ -66,8 +76,13 @@ class QuizPreviewViewController: UIViewController {
         buyButton.titleLabel?.font = StyleManager.General.Fonts.mainFont
         buyButton.layer.cornerRadius = Const.buyButtonCornerRadius
     }
+
+    @IBAction func didTapClose(_ sender: Any) {
+        router.close()
+    }
 }
 
 fileprivate extension Const {
     static let buyButtonCornerRadius: CGFloat = 20.0
+    static let closeButtonCornerRadius: CGFloat = 20.0
 }

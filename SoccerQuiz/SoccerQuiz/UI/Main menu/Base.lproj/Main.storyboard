@@ -370,7 +370,24 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E01-6n-m8e">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="255.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZi-wI-UCQ">
+                                        <rect key="frame" x="270" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="8S5-mn-VuB"/>
+                                            <constraint firstAttribute="height" constant="40" id="FUv-8K-H6K"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="didTapClose:" destination="t47-vf-D7B" eventType="touchUpInside" id="WjM-i2-IZQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PZi-wI-UCQ" secondAttribute="trailing" constant="10" id="FgD-M6-RAW"/>
+                                    <constraint firstItem="PZi-wI-UCQ" firstAttribute="top" secondItem="E01-6n-m8e" secondAttribute="top" constant="10" id="ayx-52-FKC"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mX-oi-oaL">
                                 <rect key="frame" x="20" y="230" width="280" height="20.5"/>
@@ -417,6 +434,7 @@
                     </view>
                     <connections>
                         <outlet property="buyButton" destination="eFk-dj-RCH" id="HoE-Lw-TDk"/>
+                        <outlet property="closeButton" destination="PZi-wI-UCQ" id="JpD-SO-lwA"/>
                         <outlet property="gradientView" destination="E01-6n-m8e" id="nZ7-3o-OO2"/>
                         <outlet property="quizDescriptionLabel" destination="xaW-vm-3SP" id="K5G-H3-1Vn"/>
                         <outlet property="quizImageView" destination="eEd-PL-ZlA" id="DKj-tL-qsd"/>
@@ -508,6 +526,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="24" height="24"/>
         <image name="logo_ball" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

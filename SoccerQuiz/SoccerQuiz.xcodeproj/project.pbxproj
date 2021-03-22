@@ -95,6 +95,7 @@
 		72FD18CA2607C2480089CE61 /* CoreQuestionTopContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FD18C92607C2480089CE61 /* CoreQuestionTopContent.swift */; };
 		72FD18D02607E97C0089CE61 /* QuizPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FD18CF2607E97C0089CE61 /* QuizPreviewViewController.swift */; };
 		72FD18D32607EEC00089CE61 /* QuizPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FD18D22607EEC00089CE61 /* QuizPreviewViewModel.swift */; };
+		72FD1992260931750089CE61 /* QuizPreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FD1991260931750089CE61 /* QuizPreviewRouter.swift */; };
 		B8A2C077AD0DBC719D5CA4B0 /* Pods_SoccerQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		72FD18C92607C2480089CE61 /* CoreQuestionTopContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreQuestionTopContent.swift; sourceTree = "<group>"; };
 		72FD18CF2607E97C0089CE61 /* QuizPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPreviewViewController.swift; sourceTree = "<group>"; };
 		72FD18D22607EEC00089CE61 /* QuizPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPreviewViewModel.swift; sourceTree = "<group>"; };
+		72FD1991260931750089CE61 /* QuizPreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPreviewRouter.swift; sourceTree = "<group>"; };
 		7C2027E120D2D99EFB1239AA /* Pods_SoccerQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C371E2A179B62A14E8EA4C92 /* Pods-SoccerQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerQuiz.release.xcconfig"; path = "Target Support Files/Pods-SoccerQuiz/Pods-SoccerQuiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -599,6 +601,7 @@
 			children = (
 				72FD18CF2607E97C0089CE61 /* QuizPreviewViewController.swift */,
 				72FD18D22607EEC00089CE61 /* QuizPreviewViewModel.swift */,
+				72FD1991260931750089CE61 /* QuizPreviewRouter.swift */,
 			);
 			path = "Quiz Preview";
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				72E19BBD25FCD77900EE247E /* NetworkManager.swift in Sources */,
 				72503DFE25BF5A8A000F9814 /* Question+fakeArray.swift in Sources */,
 				72B0C25F25BA0E9E00CDFC70 /* QuizCollectionViewCell.swift in Sources */,
+				72FD1992260931750089CE61 /* QuizPreviewRouter.swift in Sources */,
 				72BA85F225CF23D900994CEE /* QuestionsRouter.swift in Sources */,
 				72D6DCBD2607C00F0021FC76 /* CoreQuestionBottomContent.swift in Sources */,
 				72FD18D32607EEC00089CE61 /* QuizPreviewViewModel.swift in Sources */,
