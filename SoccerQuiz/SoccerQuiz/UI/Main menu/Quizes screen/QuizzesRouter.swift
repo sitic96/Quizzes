@@ -24,6 +24,6 @@ extension QuizzesRouter: QuizzesRouterProtocol {
         }
         quizPreviewVC.viewModel = QuizPreviewViewModel(quizPreview: quiz)
 
-        controller?.navigationController?.pushViewController(quizPreviewVC, animated: true)
+        controller?.present(quizPreviewVC, animated: true, completion: nil)
     }
 }

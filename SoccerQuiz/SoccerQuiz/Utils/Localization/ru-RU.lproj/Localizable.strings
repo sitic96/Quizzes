@@ -36,3 +36,8 @@
 "otherOptionsTitle" = "Другие опции";
 "storiesTtile" = "Stories";
 "whatsappTitle" = "Whatsapp";
+
+// MARK: - Quiz Preview
+
+"buyQuizTitle" = "Начать игру";
+"playQuizTitle" = "Играть";

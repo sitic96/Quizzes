@@ -40,5 +40,10 @@ struct LocalizeKeys {
             static let storiesTitle = "storiesTtile"
             static let whatsappTitle = "whatsappTitle"
         }
+
+        struct QuizPreview {
+            static let buyQuizTitle = "buyQuizTitle"
+            static let playQuizTitle = "playQuizTitle"
+        }
     }
 }

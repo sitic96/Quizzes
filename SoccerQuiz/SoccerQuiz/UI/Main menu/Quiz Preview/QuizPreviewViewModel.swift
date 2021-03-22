@@ -9,7 +9,7 @@ import Foundation
 
 protocol QuizPreviewViewModelProtocol {
     var quizPreview: QuizPreview { get }
-    var isAvailable: Bool { get }
+    var isQuizAvailableToStart: Bool { get }
 }
 
 class QuizPreviewViewModel {
@@ -22,7 +22,7 @@ class QuizPreviewViewModel {
 
 extension QuizPreviewViewModel: QuizPreviewViewModelProtocol {
     // To be implemented in next phase, for now all quizzes are available
-    var isAvailable: Bool {
+    var isQuizAvailableToStart: Bool {
         true
     }
 }
